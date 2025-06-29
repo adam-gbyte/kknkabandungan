@@ -14,23 +14,23 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="fixed top-2 left-1/2 -translate-x-1/2 z-50 w-[95%] md:w-[80%] backdrop-blur-md bg-white/20 dark:bg-black/30 border border-white/30 shadow-xl rounded-xl px-4 py-3">
+    <nav className="fixed top-2 left-1/2 -translate-x-1/2 z-50 w-[95%] md:w-[80%] backdrop-blur-md bg-white dark:bg-black/10 border border-white/30 shadow-xl rounded-xl px-4 py-3">
       <div className="flex items-center justify-between">
         {/* Logo */}
-        <Link to="/" className="text-xl font-bold text-blue-100 tracking-wide drop-shadow-sm">
+        <Link to="/" className="text-xl font-bold text-black tracking-wide drop-shadow-sm">
           Kabandungan
         </Link>
 
         {/* Desktop Menu */}
-        <ul className="hidden md:flex gap-6 text-white text-sm font-medium">
+        <ul className="hidden md:flex gap-6 text-black text-sm font-medium">
           {navLinks.map((link) => (
             <li key={link.path}>
               <Link
                 to={link.path}
                 className={`flex items-center gap-2 px-3 py-2 rounded-lg transition-all duration-200 ${
                   location.pathname === link.path
-                    ? 'bg-white/20 text-blue-200 font-semibold'
-                    : 'hover:bg-white/10 hover:text-blue-100'
+                    ? 'bg-black/40 text-white font-semibold'
+                    : 'hover:bg-black/35 hover:text-white'
                 }`}
               >
                 {link.icon}
@@ -42,7 +42,7 @@ export default function Navbar() {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-white"
+          className="md:hidden text-black"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle Menu"
         >
@@ -56,7 +56,7 @@ export default function Navbar() {
           isOpen ? 'max-h-80 mt-3' : 'max-h-0'
         }`}
       >
-        <ul className="flex flex-col gap-2 text-white mt-2">
+        <ul className="flex flex-col gap-2 text-black mt-2">
           {navLinks.map((link) => (
             <li key={link.path}>
               <Link
@@ -64,8 +64,8 @@ export default function Navbar() {
                 onClick={() => setIsOpen(false)}
                 className={`flex items-center gap-2 px-4 py-2 rounded-md transition-all duration-150 ${
                   location.pathname === link.path
-                    ? 'bg-white/20 text-blue-200 font-semibold'
-                    : 'hover:bg-white/10 hover:text-blue-100'
+                    ? 'bg-black/40 text-white font-semibold'
+                    : 'hover:bg-black/35 hover:text-white'
                 }`}
               >
                 {link.icon}
