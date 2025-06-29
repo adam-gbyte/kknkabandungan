@@ -16,7 +16,7 @@ export default function Navbar() {
   return (
     <nav className="fixed top-2 left-1/2 -translate-x-1/2 z-50 w-[95%] md:w-[80%] backdrop-blur-md bg-white dark:bg-black/10 border border-white/30 shadow-xl rounded-xl px-4 py-3">
       <div className="flex items-center justify-between">
-        {/* Logo */}
+        {/* Logo atau Nama */}
         <Link to="/" className="text-xl font-bold text-black tracking-wide drop-shadow-sm">
           Kabandungan
         </Link>
@@ -27,7 +27,7 @@ export default function Navbar() {
             <li key={link.path}>
               <Link
                 to={link.path}
-                className={`flex items-center gap-2 px-3 py-2 rounded-lg transition-all duration-200 ${
+                className={`flex items-center gap-2 px-3 py-2 rounded-lg transition-all duration-300 ${
                   location.pathname === link.path
                     ? 'bg-black/40 text-white font-semibold'
                     : 'hover:bg-black/35 hover:text-white'
@@ -52,7 +52,7 @@ export default function Navbar() {
 
       {/* Mobile Dropdown */}
       <div
-        className={`md:hidden transition-all duration-300 overflow-hidden ${
+        className={`md:hidden transition-all duration-500 overflow-hidden ${
           isOpen ? 'max-h-80 mt-3' : 'max-h-0'
         }`}
       >
