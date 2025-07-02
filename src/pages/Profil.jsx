@@ -18,7 +18,7 @@ const tabs = [
 ];
 
 const CardAnggota = ({ nama, foto }) => (
-  <div className="flex bg-white border border-gray-200 rounded-lg shadow-md overflow-hidden w-full max-w-full">
+  <div className="flex w-full bg-white border border-gray-200 rounded-lg shadow-md overflow-hidden max-w-full">
     <div className="flex-shrink-0 border-r border-gray-100 w-full h-full">
       <img
         src={foto}
@@ -122,7 +122,7 @@ export default function Profil() {
           <h3 className="text-center text-xl font-bold text-pink-700 mb-6">
             {tabs.find((t) => t.key === activeTab)?.label}
           </h3>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-6">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
             {anggota[activeTab].map((orang, i) => (
               <CardAnggota key={i} {...orang} />
             ))}
