@@ -23,7 +23,7 @@ export default function Beranda() {
       {/* Kanan: Ilustrasi atau Gambar */}
       <div className="md:w-1/2 mt-10 md:mt-0 flex justify-center">
         <img
-          src="https://source.unsplash.com/600x400/?village,indonesia" // ganti dengan gambar lokal jika ada
+          src="https://ik.imagekit.io/goldiron/Emilia.jpeg?updatedAt=1751460561852"
           alt="Ilustrasi Kegiatan KKN"
           className="rounded-xl shadow-lg w-full max-w-md"
         />

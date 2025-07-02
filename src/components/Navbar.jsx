@@ -18,7 +18,7 @@ export default function Navbar() {
       <div className="flex items-center justify-between">
         {/* Logo atau Nama */}
         <Link to="/" className="text-xl font-bold text-black tracking-wide drop-shadow-sm">
-          Kabandungan
+          <img src="https://ik.imagekit.io/goldiron/Logo.png?updatedAt=1751459390218" alt="Logo KKN" className="w-10 mx-auto drop-shadow-xl" />
         </Link>
 
         {/* Desktop Menu */}
