@@ -39,7 +39,7 @@ export default function Profil() {
           Profil KKN
         </h1>
 
-        <section className="shadow-xl rounded-xl relative bg-gradient-to-br from-yellow-50 via-white to-sky-50 mb-10 py-16 px-4 sm:px-8 lg:px-16 overflow-hidden">
+        <section className="shadow-xl rounded-xl relative bg-gradient-to-br from-yellow-200 via-white to-sky-200 mb-10 py-16 px-4 sm:px-8 lg:px-16 overflow-hidden">
           <div className="absolute top-[-80px] right-[-80px] w-72 h-72 bg-yellow-200 rounded-full opacity-20 blur-3xl" />
 
           <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-center gap-12 z-10 relative">
