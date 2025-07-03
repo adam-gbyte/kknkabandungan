@@ -12,7 +12,7 @@ export default function Footer() {
         {/* Kanan: Icon Sosial */}
         <div className="flex items-center gap-4 mt-4 sm:mt-0">
           <a
-            href="https://instagram.com/kknkabandungan"
+            href="https://www.instagram.com/kknkabandungan?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
             target="_blank"
             className="hover:text-pink-600 transition"
             aria-label="Instagram"
