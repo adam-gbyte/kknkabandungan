@@ -1,7 +1,9 @@
+// Profil.jsx
+
 import { useState } from "react";
 import { Sun, Droplet } from "lucide-react";
 
-import { anggotaKkn } from "../data/Data";
+import { anggotaKkn } from "../data/DataAnggota";
 import Footer from "../components/Footer";
 
 const anggota = { ...anggotaKkn };
