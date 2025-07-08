@@ -1,10 +1,10 @@
 export const grupGaleri = [
   {
-    tanggal: "2025-07-01",
+    tanggal: "2025-07-07",
     foto: [
       "https://ik.imagekit.io/goldiron/KEGIATAN/SENIN-07-JULI-2025/1.jpeg?updatedAt=1751934115246",
-      "/images/galeri/penyuluhan2.jpg",
-      "/images/galeri/penyuluhan3.jpg",
+      "https://ik.imagekit.io/goldiron/KEGIATAN/SENIN-07-JULI-2025/2.jpeg?updatedAt=1751935237216",
+      "https://ik.imagekit.io/goldiron/KEGIATAN/SENIN-07-JULI-2025/3.jpeg?updatedAt=1751935237216",
     ],
   },
   {
