@@ -47,7 +47,7 @@ export default function Galeri() {
       {selectedImage && (
         <div
           onClick={() => setSelectedImage(null)}
-          className="fixed inset-0 bg-black/20 backdrop-blur-md bg-opacity-70 flex items-center justify-center z-50"
+          className="fixed inset-0 bg-black/20 backdrop-blur-xs bg-opacity-70 flex items-center justify-center z-50"
         >
           <div
             onClick={(e) => e.stopPropagation()}

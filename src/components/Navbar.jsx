@@ -14,7 +14,7 @@ export default function Navbar() {
   ];
 
   return (
-    <nav className="fixed top-2 left-1/2 -translate-x-1/2 z-20 w-[95%] md:w-[80%] backdrop-blur-md bg-white dark:bg-black/10 border border-white/30 shadow-xl rounded-xl px-4 py-3">
+    <nav className="fixed top-2 left-1/2 -translate-x-1/2 z-20 w-[95%] md:w-[80%] backdrop-blur-sm bg-white dark:bg-black/10 border border-white/30 shadow-xl rounded-xl px-4 py-3">
       <div className="flex items-center justify-between">
         {/* Logo atau Nama */}
         <Link
