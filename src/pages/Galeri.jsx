@@ -29,13 +29,24 @@ export default function Galeri() {
               </h2>
               <div className="grid gap-4 grid-cols-2 sm:grid-cols-3 md:grid-cols-4">
                 {grup.foto.map((src, j) => (
-                  <img
-                    key={j}
-                    src={src}
-                    alt={`Foto ${i + 1}-${j + 1}`}
-                    onClick={() => setSelectedImage(src)}
-                    className="w-full h-48 object-cover rounded-xl shadow-sm hover:shadow-md hover:cursor-pointer transition-shadow"
-                  />
+                  <>
+                    <button
+                      className="group relative cursor-pointer overflow-hidden rounded-xl shadow-sm"
+                      onClick={() => setSelectedImage(src)}
+                    >
+                      <img
+                        key={j}
+                        src={src}
+                        alt={`Foto ${i + 1}-${j + 1}`}
+                        className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-110"
+                      />
+                      <div className="absolute inset-0 flex items-center justify-center bg-black/30 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
+                        <span className="text-sm font-medium text-white">
+                          Lihat Detail
+                        </span>
+                      </div>
+                    </button>
+                  </>
                 ))}
               </div>
             </div>
