@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 export default function Beranda() {
   return (
     <>
-      <div className="min-h-screen flex flex-col md:flex-row items-center justify-between px-6 md:px-16 py-12 bg-gradient-to-b from-white to-blue-50">
+      <div className="min-h-screen shadow-xl flex flex-col md:flex-row items-center justify-between px-15 md:px-16 py-10 bg-gradient-to-b rounded-2xl from-white to-blue-50">
         {/* Kiri: Teks */}
         <div className="md:w-1/2 text-center md:text-left">
           <h1 className="text-4xl font-extrabold text-blue-700 leading-tight drop-shadow-sm">
@@ -27,10 +27,10 @@ export default function Beranda() {
         </div>
 
         {/* Kanan: Ilustrasi atau Gambar */}
-        <div className="md:w-1/2 mt-10 md:mt-0 flex justify-center">
+        <div className="mt-10 flex justify-center">
           <img
-            src="https://ik.imagekit.io/goldiron/Emilia.jpeg?updatedAt=1751460561852"
-            alt="Ilustrasi Kegiatan KKN"
+            src="https://ik.imagekit.io/goldiron/KEGIATAN/SENIN-07-JULI-2025/1.jpeg?updatedAt=1751934115246"
+            alt="KKN kami"
             className="rounded-xl shadow-lg w-full max-w-md"
           />
         </div>

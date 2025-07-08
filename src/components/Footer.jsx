@@ -21,7 +21,7 @@ export default function Footer() {
           </a>
 
           <a
-            href="https://tiktok.com/@kknkabandungan"
+            href="https://tiktok.com/@kkn.kabandungan20"
             target="_blank"
             className="hover:text-black transition"
             aria-label="Music Link"
