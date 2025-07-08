@@ -62,7 +62,7 @@ export default function Galeri() {
             <img
               src={selectedImage}
               alt="Preview"
-              className="w-full max-h-[80vh] object-contain rounded-lg shadow-xl"
+              className="w-full bg-white max-h-[80vh] object-contain rounded-lg shadow-xl"
             />
           </div>
         </div>
