@@ -16,9 +16,9 @@ export default function Laporan() {
 
         <div className="space-y-10">
           {laporanKegiatan.map((laporan, index) => (
-            <div
+            <button
               key={index}
-              className="bg-white shadow-md rounded-xl overflow-hidden"
+              className="bg-white  shadow-md cursor-pointer rounded-xl overflow-hidden"
             >
               <img
                 src={laporan.foto}
@@ -36,7 +36,7 @@ export default function Laporan() {
                 <h2 className="text-xl font-semibold mt-1">{laporan.judul}</h2>
                 <p className="mt-2 text-gray-700">{laporan.deskripsi}</p>
               </div>
-            </div>
+            </button>
           ))}
         </div>
       </div>
