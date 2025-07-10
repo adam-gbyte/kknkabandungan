@@ -20,4 +20,10 @@ export const grupGaleri = [
       "/images/galeri/umkm4.jpg",
     ],
   },
+  {
+    tanggal: "2025-07-10",
+    foto: [
+      "https://ik.imagekit.io/goldiron/KEGIATAN/KAMIS-10-JULI-2025/1.jpeg?updatedAt=1752132570120",
+    ],
+  },
 ];
