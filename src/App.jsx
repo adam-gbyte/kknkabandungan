@@ -13,7 +13,7 @@ export default function App() {
         {/* Navbar */}
         <Navbar />
         {/* Main Content */}
-        <main className="flex-1 pt-25 p-6 overflow-y-auto">
+        <main className="flex-1 pt-25 p-4 overflow-y-auto">
           <Routes>
             <Route path="/" element={<Beranda />} />
             <Route path="/galeri" element={<Galeri />} />
