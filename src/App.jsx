@@ -6,6 +6,7 @@ import Profil from "./pages/Profil";
 import Laporan from "./pages/Laporan";
 import PenguatanKarir from "./pages/PenguatanKarir";
 import GeminiTest from "./pages/GeminiTest";
+import LlamaTest from "./pages/LlamaTest";
 
 export default function App() {
   return (
@@ -22,6 +23,7 @@ export default function App() {
             <Route path="/laporan" element={<Laporan />} />
             <Route path="/penguatan-karir" element={<PenguatanKarir />} />
             <Route path="/gemini-test" element={<GeminiTest />} />
+            <Route path="/llama-test" element={<LlamaTest />} />
 
             {/* Halaman tidak ditemukan */}
             <Route
