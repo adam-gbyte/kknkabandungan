@@ -1,3 +1,5 @@
+import Footer from "../components/Footer";
+
 export default function PenguatanKarir() {
   return (
     <>
@@ -7,6 +9,8 @@ export default function PenguatanKarir() {
           <h1 className="text-3xl font-bold mb-2">Penguatan Karir</h1>
         </div>
       </div>
+
+      <Footer />
     </>
   );
 }
