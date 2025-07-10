@@ -8,11 +8,11 @@ export const grupGaleri = [
     ],
   },
   {
-    tanggal: "2025-07-03",
+    tanggal: "2025-07-08",
     foto: ["/images/galeri/bersih1.jpg", "/images/galeri/bersih2.jpg"],
   },
   {
-    tanggal: "2025-07-05",
+    tanggal: "2025-07-09",
     foto: [
       "/images/galeri/umkm1.jpg",
       "/images/galeri/umkm2.jpg",

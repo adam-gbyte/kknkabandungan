@@ -12,10 +12,7 @@ export default function Galeri() {
     <>
       <div className="px-4 py-8 max-w-6xl mx-auto">
         <h1 className="text-3xl font-bold mb-4">Galeri Kegiatan KKN</h1>
-        <p className="text-gray-600 mb-6">
-          Berikut adalah dokumentasi foto kegiatan KKN yang dikelompokkan
-          berdasarkan tanggal pelaksanaan.
-        </p>
+        <p className="text-gray-600 mb-6">Dokumentasi kegiatan KKN.</p>
 
         <div className="space-y-10">
           {grupGaleri.map((grup, i) => (

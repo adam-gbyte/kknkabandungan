@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Home, Image, User, FileText } from "lucide-react";
+import { Menu, X, Home, Image, User, FileText, Briefcase } from "lucide-react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -11,6 +11,11 @@ export default function Navbar() {
     { name: "Galeri", path: "/galeri", icon: <Image size={18} /> },
     { name: "Profil", path: "/profil", icon: <User size={18} /> },
     { name: "Laporan", path: "/laporan", icon: <FileText size={18} /> },
+    {
+      name: "Penguatan Karir",
+      path: "/penguatan-karir",
+      icon: <Briefcase size={18} />,
+    },
   ];
 
   return (

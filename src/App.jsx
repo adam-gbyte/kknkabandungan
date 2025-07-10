@@ -4,6 +4,7 @@ import Beranda from "./pages/Beranda";
 import Galeri from "./pages/Galeri";
 import Profil from "./pages/Profil";
 import Laporan from "./pages/Laporan";
+import PenguatanKarir from "./pages/PenguatanKarir";
 
 export default function App() {
   return (
@@ -18,6 +19,7 @@ export default function App() {
             <Route path="/galeri" element={<Galeri />} />
             <Route path="/profil" element={<Profil />} />
             <Route path="/laporan" element={<Laporan />} />
+            <Route path="/penguatan-karir" element={<PenguatanKarir />} />
           </Routes>
         </main>
       </div>
