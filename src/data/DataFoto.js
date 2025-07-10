@@ -24,6 +24,25 @@ export const grupGaleri = [
     tanggal: "2025-07-10",
     foto: [
       "https://ik.imagekit.io/goldiron/KEGIATAN/KAMIS-10-JULI-2025/1.jpeg?updatedAt=1752132570120",
+      "https://ik.imagekit.io/goldiron/KEGIATAN/KAMIS-10-JULI-2025/2.jpeg?updatedAt=1752132570120",
+    ],
+  },
+  {
+    tanggal: "2025-07-11",
+    foto: [
+      "/images/galeri/umkm1.jpg",
+      "/images/galeri/umkm2.jpg",
+      "/images/galeri/umkm3.jpg",
+      "/images/galeri/umkm4.jpg",
+    ],
+  },
+  {
+    tanggal: "2025-07-12",
+    foto: [
+      "/images/galeri/umkm1.jpg",
+      "/images/galeri/umkm2.jpg",
+      "/images/galeri/umkm3.jpg",
+      "/images/galeri/umkm4.jpg",
     ],
   },
 ];
