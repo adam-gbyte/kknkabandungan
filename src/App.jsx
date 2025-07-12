@@ -4,7 +4,7 @@ import Beranda from "./pages/Beranda";
 import Galeri from "./pages/Galeri";
 import Profil from "./pages/Profil";
 import Laporan from "./pages/Laporan";
-import PenguatanKarir from "./pages/PenguatanKarir";
+import PemantapanKarir from "./pages/PemantapanKarir";
 import GeminiTest from "./pages/GeminiTest";
 import LlamaTest from "./pages/LlamaTest";
 import KarierForm from "./pages/KarirForm";
@@ -22,7 +22,7 @@ export default function App() {
             <Route path="/galeri" element={<Galeri />} />
             <Route path="/profil" element={<Profil />} />
             <Route path="/laporan" element={<Laporan />} />
-            <Route path="/penguatan-karir" element={<PenguatanKarir />} />
+            <Route path="/pemantapan-karir" element={<PemantapanKarir />} />
             <Route path="/karier-form" element={<KarierForm />} />
             <Route path="/gemini-test" element={<GeminiTest />} />
             <Route path="/llama-test" element={<LlamaTest />} />
