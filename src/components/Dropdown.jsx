@@ -11,7 +11,7 @@ export default function Dropdown({
   return (
     <div className="mb-4 bg-gray-100 p-4 rounded shadow">
       <label className="block mb-4">
-        <span className="font-semibold">{label}</span>
+        <span className="font-bold">{label}</span>
         {soal && <p className="text-2lg">{soal}</p>}
         <select
           className="w-full border p-2 mt-1 rounded"
