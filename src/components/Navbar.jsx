@@ -13,7 +13,7 @@ export default function Navbar() {
     { name: "Laporan", path: "/laporan", icon: <FileText size={18} /> },
     {
       name: "Karir",
-      path: "/penguatan-karir",
+      path: "/pemantapan-karir",
       icon: <Briefcase size={18} />,
     },
   ];
