@@ -80,7 +80,7 @@ export default function CheckboxGroup({
                 type="text"
                 value={valueLainnya}
                 onChange={(e) => onChangeLainnya(e.target.value)}
-                className="ml-2 border rounded px-2 py-1 w-48"
+                className="ml-2 border rounded px-2 py-1 w-full"
                 placeholder="Tulis jawaban lain"
               />
             </label>
