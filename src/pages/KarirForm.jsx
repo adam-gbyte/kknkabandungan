@@ -25,7 +25,7 @@ export default function KarierForm() {
     <div className="space-y-4 p-4 max-w-xl mx-auto">
       {/* Minat dan Hobi */}
       <label className="block mb-4">
-        <span className="font-semibold">Minat dan Hobi</span>
+        <span className="font-bold">Minat dan Hobi</span>
       </label>
       <Dropdown
         soal="Apa yang paling kamu nikmati di waktu luangmu?"
@@ -61,9 +61,10 @@ export default function KarierForm() {
         valueLainnya={topikLainnya}
         onChangeLainnya={setTopikLainnya}
       />
-      {/* Keterampilan / skill saat ini */}
+
+      {/* === Keterampilan / skill saat ini === */}
       <label className="block mb-4">
-        <span className="font-semibold">Keterampilan / Skill saat ini</span>
+        <span className="font-bold">Keterampilan / Skill saat ini</span>
       </label>
       <Dropdown
         soal="Apa keahlian yang sudah kamu miliki?"
@@ -90,6 +91,7 @@ export default function KarierForm() {
         value={skorSkill}
         maxNum="10"
       />
+
       {/* Pengalaman */}
       <label className="block">
         Apakah kamu punya pengalaman kerja/praktek?
@@ -112,15 +114,15 @@ export default function KarierForm() {
         )}
       </label>
 
-      {/* Preferensi Karir */}
+      {/* === Preferensi Karir === */}
       <label className="block mb-4">
-        <span className="font-semibold">Preferensi Karir</span>
+        <span className="font-bold">Preferensi Karir</span>
       </label>
       <Dropdown
         soal="Kamu tertarik bekerja di bidang apa?"
         label="Bidang Karir"
-        value={keahlian}
-        onChange={setKeahlian}
+        value={karir}
+        onChange={setKarir}
         options={[
           "Teknologi / IT",
           "Desain Kreatif",
@@ -131,8 +133,8 @@ export default function KarierForm() {
           "Masih bingung",
         ]}
         showLainnya={true}
-        valueLainnya={keahlianLainnya}
-        onChangeLainnya={setKeahlianLainnya}
+        valueLainnya={karirLainnya}
+        onChangeLainnya={setKarirLainnya}
       />
     </div>
   );
