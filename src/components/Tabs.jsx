@@ -25,7 +25,7 @@ export default function Tabs({ tabs = [] }) {
       </div>
 
       {/* Tab Content */}
-      <div className="p-6 bg-white border border-t-0 rounded-b-lg shadow">
+      <div className="p-2 bg-white border border-t-0 rounded-b-lg shadow">
         {tabs[activeIndex]?.content}
       </div>
     </div>
