@@ -89,7 +89,7 @@ export default function PenguatanKarir() {
 
   return (
     <>
-      <div className="space-y-4 p-2 max-w-xl mx-auto">
+      <div className="space-y-4 p-2 mx-auto">
         <h1 className="text-3xl font-bold mb-4">Penguatan Karir</h1>
         <Tabs tabs={tabData} />
       </div>
