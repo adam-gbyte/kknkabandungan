@@ -12,18 +12,18 @@ export default function Tabs({ tabs = [] }) {
   };
 
   return (
-    <div className="w-full max-w-5xl mx-auto">
+    <div className="w-full max-w-3xl mx-auto">
       {/* Tab Header */}
-      <div className="overflow-x-auto whitespace-nowrap bg-gray-100 rounded-t-lg p-3">
+      <div className="overflow-x-auto whitespace-nowrap">
         <div className="inline-flex space-x-2">
           {tabs.map((tab, index) => (
             <button
               key={index}
               onClick={() => setActiveIndex(index)}
-              className={`px-4 py-2 text-sm font-medium rounded-md transition-all duration-200 ${
+              className={`px-4 py-2 text-sm font-medium bg-gray-100 rounded-t-md transition-all duration-200 ${
                 activeIndex === index
                   ? "bg-white shadow text-blue-600"
-                  : "text-gray-600 hover:text-blue-500"
+                  : "text-gray-500 hover:text-blue-500"
               }`}
             >
               {tab.label}
@@ -33,7 +33,7 @@ export default function Tabs({ tabs = [] }) {
       </div>
 
       {/* Tab Content */}
-      <div className="p-2 bg-white border rounded-b-lg shadow">
+      <div className="p-2 bg-white rounded-b-lg shadow-md">
         {tabs[activeIndex]?.content}
       </div>
 
