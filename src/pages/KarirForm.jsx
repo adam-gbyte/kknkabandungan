@@ -1,14 +1,23 @@
 import { useState } from "react";
 import Dropdown from "../components/Dropdown";
+import Scale from "../components/Scale";
 
 export default function KarierForm() {
+  // Minat dan Hobi
   const [luang, setLuang] = useState("");
   const [luangLainnya, setLuangLainnya] = useState("");
+  const [topik, setTopik] = useState("");
+  const [topikLainnya, setTopikLainnya] = useState("");
 
-  const [minat, setMinat] = useState("");
-  const [minatLainnya, setMinatLainnya] = useState("");
-
+  // Keterampilan / Skill
+  const [keahlian, setKeahlian] = useState("");
+  const [keahlianLainnya, setKeahlianLainnya] = useState("");
   const [skorSkill, setSkorSkill] = useState(3);
+
+  //   Preferensi karir
+  const [karir, setKarir] = useState("");
+  const [karirLainnya, setKarirLainnya] = useState("");
+
   const [punyaPengalaman, setPunyaPengalaman] = useState("Belum pernah");
   const [bidangPengalaman, setBidangPengalaman] = useState("");
 
@@ -18,7 +27,6 @@ export default function KarierForm() {
       <label className="block mb-4">
         <span className="font-semibold">Minat dan Hobi</span>
       </label>
-
       <Dropdown
         soal="Apa yang paling kamu nikmati di waktu luangmu?"
         label="Waktu luang"
@@ -36,39 +44,52 @@ export default function KarierForm() {
         valueLainnya={luangLainnya}
         onChangeLainnya={setLuangLainnya}
       />
-
       <Dropdown
         soal="Topik apa yangg paling sering kamu cari di internet?"
-        label="Minat"
-        value={minat}
-        onChange={setMinat}
+        label="Topik"
+        value={topik}
+        onChange={setTopik}
         options={[
-          "Membaca / Menulis",
-          "Bermain game",
-          "Mendesain / Menggambar",
-          "Memperbaiki barang / otak atik teknologi",
-          "Berbicara / mengajar orang lain",
-          "Memimpin tim",
+          "Teknologi",
+          "Kesehatan",
+          "Seni & desain",
+          "Bisnis",
+          "Pendidikan",
+          "Psikologi",
         ]}
         showLainnya={true}
-        valueLainnya={minatLainnya}
-        onChangeLainnya={setMinatLainnya}
+        valueLainnya={topikLainnya}
+        onChangeLainnya={setTopikLainnya}
       />
-
-      {/* Skor skill */}
-      <label className="block">
-        Seberapa percaya dirimu dengan skill kamu? (1–5)
-        <input
-          type="range"
-          min={1}
-          max={5}
-          value={skorSkill}
-          onChange={(e) => setSkorSkill(Number(e.target.value))}
-          className="w-full"
-        />
-        <div>Skor: {skorSkill}</div>
+      {/* Keterampilan / skill saat ini */}
+      <label className="block mb-4">
+        <span className="font-semibold">Keterampilan / Skill saat ini</span>
       </label>
-
+      <Dropdown
+        soal="Apa keahlian yang sudah kamu miliki?"
+        label="Keahlian"
+        value={keahlian}
+        onChange={setKeahlian}
+        options={[
+          "Menulis",
+          "Public Speaking",
+          "Desain Grafis",
+          "Coding / Pemrogramman",
+          "Analisis Data",
+          "Manajemen Proyek",
+          "Fotografi / Videografi",
+        ]}
+        showLainnya={true}
+        valueLainnya={keahlianLainnya}
+        onChangeLainnya={setKeahlianLainnya}
+      />
+      <Scale
+        soal="Seberapa percaya dirimu dengan skill kamu? (1–10)"
+        label="Skor Skill"
+        onChange={setSkorSkill}
+        value={skorSkill}
+        maxNum="10"
+      />
       {/* Pengalaman */}
       <label className="block">
         Apakah kamu punya pengalaman kerja/praktek?
@@ -90,6 +111,29 @@ export default function KarierForm() {
           />
         )}
       </label>
+
+      {/* Preferensi Karir */}
+      <label className="block mb-4">
+        <span className="font-semibold">Preferensi Karir</span>
+      </label>
+      <Dropdown
+        soal="Kamu tertarik bekerja di bidang apa?"
+        label="Bidang Karir"
+        value={keahlian}
+        onChange={setKeahlian}
+        options={[
+          "Teknologi / IT",
+          "Desain Kreatif",
+          "Pendidikan",
+          "Kesehatan",
+          "Bisnis / Keuangan",
+          "Sosial / Psikologi",
+          "Masih bingung",
+        ]}
+        showLainnya={true}
+        valueLainnya={keahlianLainnya}
+        onChangeLainnya={setKeahlianLainnya}
+      />
     </div>
   );
 }
