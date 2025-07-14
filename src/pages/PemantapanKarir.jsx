@@ -28,8 +28,10 @@ export default function PenguatanKarir() {
   // Kepribadian & Gaya Belajar / Kerja
   const [kepribadian, setKepribadian] = useState("");
   const [kepribadianLainnya, setKepribadianLainnya] = useState("");
+  const [gayaBelajar, setGayaBelajar] = useState("");
+  const [gayaBelajarLainnya, setGayaBelajarLainnya] = useState("");
   const [mySelf, setMySelf] = useState("");
-  const [MySelfLainnya, setMySelfLainnya] = useState("");
+  const [mySelfLainnya, setMySelfLainnya] = useState("");
 
   // Tujuan & Harapan Karier
 
@@ -93,6 +95,14 @@ export default function PenguatanKarir() {
           setKepribadian={setKepribadian}
           kepribadianLainnya={kepribadianLainnya}
           setKepribadianLainnya={setKepribadianLainnya}
+          gayaBelajar={gayaBelajar}
+          setGayaBelajar={setGayaBelajar}
+          gayaBelajarLainnya={gayaBelajarLainnya}
+          setGayaBelajarLainnya={setGayaBelajarLainnya}
+          mySelf={mySelf}
+          setMySelf={setMySelf}
+          mySelfLainnya={mySelfLainnya}
+          setMySelfLainnya={setMySelfLainnya}
         />
       ),
     },
