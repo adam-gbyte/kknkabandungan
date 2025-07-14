@@ -40,6 +40,9 @@ export default function PenguatanKarir() {
   const [punyaPengalaman, setPunyaPengalaman] = useState("Belum pernah");
   const [bidangPengalaman, setBidangPengalaman] = useState("");
 
+  // NAMA
+  const [nama, setNama] = useState("");
+
   // PERCOBAAN
   const [selected, setSelected] = useState([]);
   const [lainnya, setLainnya] = useState("");
@@ -93,6 +96,22 @@ export default function PenguatanKarir() {
         <h1 className="text-center text-3xl font-bold mb-4">
           Pemantapan Karir
         </h1>
+        <div className="w-full max-w-3xl mx-auto">
+          <div className="p-2">
+            <div className="mt-4">
+              <label className="flex items-center space-x-2">
+                <span>Nama:</span>
+                <input
+                  type="text"
+                  value={nama}
+                  onChange={(e) => setNama(e.target.value)}
+                  className="ml-2 border rounded m-4 px-2 py-1 w-full"
+                  placeholder="Nama anda..."
+                />
+              </label>
+            </div>
+          </div>
+        </div>
         <Tabs tabs={tabData} />
       </div>
 
