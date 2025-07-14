@@ -27,7 +27,7 @@ export default function Dropdown({
           {showLainnya && <option value="Lainnya">Lainnya</option>}
         </select>
 
-        {showLainnya && (
+        {value === "Lainnya" && showLainnya && (
           <input
             type="text"
             className="border p-2 w-full mt-2 rounded"
