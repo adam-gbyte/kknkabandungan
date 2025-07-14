@@ -87,7 +87,14 @@ export default function PenguatanKarir() {
     },
     {
       label: "Kepribadian & Gaya Belajar",
-      content: <KepribadianDanGayaBelajar />,
+      content: (
+        <KepribadianDanGayaBelajar
+          kepribadian={kepribadian}
+          setKepribadian={setKepribadian}
+          kepribadianLainnya={kepribadianLainnya}
+          setKepribadianLainnya={setKepribadianLainnya}
+        />
+      ),
     },
     {
       label: "Tujuan & Harapan Karier",

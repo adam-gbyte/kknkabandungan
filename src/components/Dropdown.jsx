@@ -1,6 +1,6 @@
 export default function Dropdown({
   soal = "",
-  label,
+  label = "",
   value,
   onChange,
   options = [],
@@ -24,10 +24,10 @@ export default function Dropdown({
               {option}
             </option>
           ))}
-          <option value="Lainnya">Lainnya</option>
+          {showLainnya && <option value="Lainnya">Lainnya</option>}
         </select>
 
-        {value === "Lainnya" && showLainnya && (
+        {showLainnya && (
           <input
             type="text"
             className="border p-2 w-full mt-2 rounded"
