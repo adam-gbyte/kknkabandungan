@@ -44,7 +44,7 @@ Tolong bantu analisa dan hasilkan:
         contents: [{ role: "user", parts: [{ text: prompt }] }],
       });
 
-      const responseText = await response.response.text();
+      const responseText = await response.text;
       setText(responseText);
     } catch (error) {
       console.error(
