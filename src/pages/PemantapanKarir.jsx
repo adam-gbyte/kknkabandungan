@@ -4,9 +4,11 @@ import Dropdown from "../components/Dropdown";
 import Scale from "../components/Scale";
 import CheckboxGroup from "../components/CheckboxGroup";
 import Tabs from "../components/Tabs";
-import MinatDanHobi from "../components/form/MinatDanHobi";
 
 import Footer from "../components/Footer";
+import MinatDanHobi from "../components/form/MinatDanHobi";
+import KeterampilanDanSkill from "../components/form/KeterampilanDanSkill";
+import KepribadianDanGayaBelajar from "../components/form/KepribadianDanGayaBelajar";
 
 export default function PenguatanKarir() {
   // Minat dan Hobi
@@ -18,7 +20,7 @@ export default function PenguatanKarir() {
   const [topikLainnya, setTopikLainnya] = useState("");
 
   // Keterampilan / Skill Saat Ini
-  const [skill, setSkill] = useState("");
+  const [skill, setSkill] = useState([]);
   const [skillLainnya, setSkillLainnya] = useState("");
   const [skorSkill, setSkorSkill] = useState(3);
   const [belajar, setBelajar] = useState("Tidak");
@@ -70,11 +72,22 @@ export default function PenguatanKarir() {
     },
     {
       label: "Keterampilan & Skill",
-      content: <p>Ini adalah isi dari Tab Keterampilan & Skill</p>,
+      content: (
+        <KeterampilanDanSkill
+          skill={skill}
+          setSkill={setSkill}
+          skillLainnya={skillLainnya}
+          setSkillLainnya={setSkillLainnya}
+          skorSkill={skorSkill}
+          setSkorSkill={setSkorSkill}
+          belajar={belajar}
+          setBelajar={setBelajar}
+        />
+      ),
     },
     {
       label: "Kepribadian & Gaya Belajar",
-      content: <p>Ini adalah isi dari Tab Kepribadian & Gaya Belajar</p>,
+      content: <KepribadianDanGayaBelajar />,
     },
     {
       label: "Tujuan & Harapan Karier",
