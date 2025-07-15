@@ -44,7 +44,7 @@ export default function PreferensiKarir({
         disabled={!isFormComplete()}
         className={`${
           isFormComplete()
-            ? "bg-blue-600 hover:bg-blue-700 cursor-pointer"
+            ? "bg-blue-600 hover:bg-blue-700 cursor-pointer animate-pulse hover:animate-none"
             : "bg-gray-400 cursor-not-allowed"
         } text-white font-semibold py-2 px-4 rounded-xl shadow transition`}
       >
