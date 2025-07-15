@@ -10,6 +10,7 @@ import MinatDanHobi from "../components/form/MinatDanHobi";
 import KeterampilanDanSkill from "../components/form/KeterampilanDanSkill";
 import KepribadianDanGayaBelajar from "../components/form/KepribadianDanGayaBelajar";
 import TujuanDanHarapanKarir from "../components/form/TujuanDanHarapanKarir";
+import AktivitasSekolahDanNonformal from "../components/form/AktivitasSekolahDanNonformal";
 
 export default function PenguatanKarir() {
   // Minat dan Hobi
@@ -39,6 +40,8 @@ export default function PenguatanKarir() {
   const [karierLainnya, setkarierLainnya] = useState("");
 
   // Aktivitas Sekolah & NonFormal
+  const [kegiatan, setKegiatan] = useState([]);
+  const [kegiatanLainnya, setKegiatanLainnya] = useState("");
 
   //   Preferensi karir
   const [karir, setKarir] = useState("");
@@ -116,13 +119,20 @@ export default function PenguatanKarir() {
           karier={karier}
           setKarier={setKarier}
           karierLainnya={karierLainnya}
-          setKarierLainnya={setKarirLainnya}
+          setKarierLainnya={setkarierLainnya}
         />
       ),
     },
     {
       label: "Aktivitas Sekolah & Nonformal",
-      content: <p>Ini adalah isi dari Tab Aktivitas Sekolah & Nonformal</p>,
+      content: (
+        <AktivitasSekolahDanNonformal
+          kegiatan={kegiatan}
+          setKegiatan={setKegiatan}
+          kegiatanLainnya={kegiatanLainnya}
+          setKegiatanLainnya={setKegiatanLainnya}
+        />
+      ),
     },
     {
       label: "Referensi Karier",
