@@ -16,6 +16,12 @@ import Modal from "../components/Modal";
 
 import buatKalimatUntukGemini from "../components/Kalimat";
 
+import { GoogleGenAI } from "@google/genai";
+
+const ai = new GoogleGenAI({
+  apiKey: import.meta.env.VITE_GEMINI_API_KEY,
+});
+
 export default function PenguatanKarir() {
   // Minat dan Hobi
   const [luang, setLuang] = useState([]);
@@ -89,7 +95,28 @@ export default function PenguatanKarir() {
     lulus,
   });
 
-  console.log(kalimat);
+  const [text, setText] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  async function Gemini() {
+    loading(true);
+    try {
+      const response = await ai.models.generateContent({
+        model: "gemini-1.5-flash",
+        contents: [{ role: "user", parts: [{ text: kalimat }] }],
+      });
+
+      const responseText = await response.text;
+      setText(responseText);
+    } catch (error) {
+      console.error(
+        "Terjadi error saat mengakses Gemini:",
+        error.message || error,
+      );
+    } finally {
+      setLoading(false);
+    }
+  }
 
   // Validasi form
   const isFormComplete = () => {
@@ -240,7 +267,7 @@ export default function PenguatanKarir() {
           onClose={() => setIsModalOpen(false)}
           title={`Ini adalah karier yang harus ${nama || "User"} tekuni`}
           deskripsi="Berdasarkan jawaban kamu, berikut ini adalah rekomendasi karier yang sangat cocok untuk kepribadian dan minat kamu:"
-          rekomendasi={[kalimat]}
+          rekomendasi={[text]}
         />
       </div>
 
