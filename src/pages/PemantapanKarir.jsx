@@ -60,6 +60,32 @@ export default function PenguatanKarir() {
     setIsModalOpen(true);
   };
 
+  // Validasi form
+  const isFormComplete = () => {
+    return (
+      nama.trim() !== "" &&
+      // Minat & Hobi
+      (luang.length > 0 || luangLainnya.trim() !== "") &&
+      (pelajaran !== "" || pelajaranLainnya.trim() !== "") &&
+      (topik !== "" || topikLainnya.trim() !== "") &&
+      // Keterampilan
+      (skill.length > 0 || skillLainnya.trim() !== "") &&
+      belajar !== "" &&
+      skorSkill !== null &&
+      // Kepribadian & Gaya Belajar
+      (kepribadian !== "" || kepribadianLainnya.trim() !== "") &&
+      (gayaBelajar !== "" || gayaBelajarLainnya.trim() !== "") &&
+      (mySelf !== "" || mySelfLainnya.trim() !== "") &&
+      // Tujuan Karier
+      (karier.length > 0 || karierLainnya.trim() !== "") &&
+      // Aktivitas
+      (kegiatan.length > 0 || kegiatanLainnya.trim() !== "") &&
+      // Preferensi Karier
+      (karir.length > 0 || karirLainnya.trim() !== "") &&
+      lulus !== ""
+    );
+  };
+
   // TABS
   const tabData = [
     {
@@ -147,6 +173,8 @@ export default function PenguatanKarir() {
           setKarirLainnya={setKarirLainnya}
           lulus={lulus}
           setLulus={setLulus}
+          handleLihatHasil={handleLihatHasil}
+          isFormComplete={isFormComplete}
         />
       ),
     },
@@ -176,17 +204,10 @@ export default function PenguatanKarir() {
         </div>
         <Tabs tabs={tabData} />
 
-        <button
-          onClick={handleLihatHasil}
-          className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-xl shadow"
-        >
-          Lihat Rekomendasi
-        </button>
-
         <Modal
           isOpen={isModalOpen}
           onClose={() => setIsModalOpen(false)}
-          title="Ini adalah karier yang harus kamu tekuni"
+          title={`Ini adalah karier yang harus ${nama || "User"} tekuni`}
           deskripsi="Berdasarkan jawaban kamu, berikut ini adalah rekomendasi karier yang sangat cocok untuk kepribadian dan minat kamu:"
           rekomendasi={[
             "Kamu sangat cocok menjadi seorang Software Engineer karena kamu memiliki kemampuan analisis yang kuat, suka memecahkan masalah, dan mampu bekerja mandiri maupun dalam tim.",

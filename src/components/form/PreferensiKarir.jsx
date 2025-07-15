@@ -8,6 +8,8 @@ export default function PreferensiKarir({
   setKarirLainnya = () => {},
   lulus,
   setLulus = () => {},
+  handleLihatHasil = () => {},
+  isFormComplete = () => {},
 }) {
   return (
     <>
@@ -37,6 +39,17 @@ export default function PreferensiKarir({
         options={["Langsung Bekerja", "Malnjutkan Kuliah", "Belum Tahu"]}
         showLainnya={false}
       />
+      <button
+        onClick={handleLihatHasil}
+        disabled={!isFormComplete()}
+        className={`${
+          isFormComplete()
+            ? "bg-blue-600 hover:bg-blue-700 cursor-pointer"
+            : "bg-gray-400 cursor-not-allowed"
+        } text-white font-semibold py-2 px-4 rounded-xl shadow transition`}
+      >
+        Lihat Rekomendasi
+      </button>
     </>
   );
 }
