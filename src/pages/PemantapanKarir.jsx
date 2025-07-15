@@ -11,6 +11,7 @@ import KeterampilanDanSkill from "../components/form/KeterampilanDanSkill";
 import KepribadianDanGayaBelajar from "../components/form/KepribadianDanGayaBelajar";
 import TujuanDanHarapanKarir from "../components/form/TujuanDanHarapanKarir";
 import AktivitasSekolahDanNonformal from "../components/form/AktivitasSekolahDanNonformal";
+import PreferensiKarir from "../components/form/PreferensiKarir";
 
 export default function PenguatanKarir() {
   // Minat dan Hobi
@@ -46,8 +47,7 @@ export default function PenguatanKarir() {
   //   Preferensi karir
   const [karir, setKarir] = useState("");
   const [karirLainnya, setKarirLainnya] = useState("");
-
-  const [punyaPengalaman, setPunyaPengalaman] = useState("Belum pernah");
+  const [lulus, setLulus] = useState("Belum pernah");
   const [bidangPengalaman, setBidangPengalaman] = useState("");
 
   // NAMA
@@ -136,7 +136,16 @@ export default function PenguatanKarir() {
     },
     {
       label: "Referensi Karier",
-      content: <p>Ini adalah isi dari Tab Referensi Karier</p>,
+      content: (
+        <PreferensiKarir
+          karir={karir}
+          setKarir={setKarir}
+          karirLainnya={karirLainnya}
+          setKarirLainnya={setKarirLainnya}
+          lulus={lulus}
+          setLulus={setLulus}
+        />
+      ),
     },
   ];
 
