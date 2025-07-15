@@ -52,10 +52,6 @@ export default function PenguatanKarir() {
   // NAMA
   const [nama, setNama] = useState("");
 
-  // PERCOBAAN
-  const [selected, setSelected] = useState([]);
-  const [lainnya, setLainnya] = useState("");
-
   // TABS
   const tabData = [
     {
