@@ -44,7 +44,7 @@ export default function PenguatanKarir() {
   const [kegiatan, setKegiatan] = useState([]);
   const [kegiatanLainnya, setKegiatanLainnya] = useState("");
 
-  //   Preferensi karir
+  // Preferensi karir
   const [karir, setKarir] = useState([]);
   const [karirLainnya, setKarirLainnya] = useState("");
   const [lulus, setLulus] = useState("");

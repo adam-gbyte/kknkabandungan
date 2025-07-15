@@ -15,7 +15,7 @@ export default function Tabs({ tabs = [] }) {
     <div className="w-full max-w-3xl mx-auto">
       {/* Tab Header */}
       <div className="overflow-x-auto whitespace-nowrap">
-        <div className="inline-flex space-x-2">
+        <div className="inline-flex space-x-5">
           {tabs.map((tab, index) => (
             <button
               key={index}
