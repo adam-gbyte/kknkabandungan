@@ -186,12 +186,11 @@ export default function PenguatanKarir() {
         <Modal
           isOpen={isModalOpen}
           onClose={() => setIsModalOpen(false)}
-          title="Ini adalah karier atau jurusan yang harus kamu tekuni"
-          deskripsi="Berikut ini hasil rekomendasi karier dan jurusan berdasarkan pilihan kamu:"
+          title="Ini adalah karier yang harus kamu tekuni"
+          deskripsi="Berdasarkan jawaban kamu, berikut ini adalah rekomendasi karier yang sangat cocok untuk kepribadian dan minat kamu:"
           rekomendasi={[
-            "Data Analyst",
-            "Psikolog Pendidikan",
-            "Software Developer",
+            "Kamu sangat cocok menjadi seorang Software Engineer karena kamu memiliki kemampuan analisis yang kuat, suka memecahkan masalah, dan mampu bekerja mandiri maupun dalam tim.",
+            "Pilihan lainnya adalah menjadi seorang Data Analyst yang fokus dalam menganalisis dan menginterpretasi data untuk menghasilkan keputusan strategis.",
           ]}
         />
       </div>
