@@ -48,7 +48,6 @@ export default function PenguatanKarir() {
   const [karir, setKarir] = useState([]);
   const [karirLainnya, setKarirLainnya] = useState("");
   const [lulus, setLulus] = useState("");
-  const [bidangPengalaman, setBidangPengalaman] = useState("");
 
   // NAMA
   const [nama, setNama] = useState("");
