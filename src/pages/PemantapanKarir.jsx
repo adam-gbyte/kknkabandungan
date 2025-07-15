@@ -14,6 +14,8 @@ import AktivitasSekolahDanNonformal from "../components/form/AktivitasSekolahDan
 import PreferensiKarir from "../components/form/PreferensiKarir";
 import Modal from "../components/Modal";
 
+import buatKalimatUntukGemini from "../components/Kalimat";
+
 export default function PenguatanKarir() {
   // Minat dan Hobi
   const [luang, setLuang] = useState([]);
@@ -59,6 +61,35 @@ export default function PenguatanKarir() {
   const handleLihatHasil = () => {
     setIsModalOpen(true);
   };
+
+  const kalimat = buatKalimatUntukGemini({
+    nama,
+    luang,
+    luangLainnya,
+    pelajaran,
+    pelajaranLainnya,
+    topik,
+    topikLainnya,
+    skill,
+    skillLainnya,
+    skorSkill,
+    belajar,
+    kepribadian,
+    kepribadianLainnya,
+    gayaBelajar,
+    gayaBelajarLainnya,
+    mySelf,
+    mySelfLainnya,
+    karier,
+    karierLainnya,
+    kegiatan,
+    kegiatanLainnya,
+    karir,
+    karirLainnya,
+    lulus,
+  });
+
+  console.log(kalimat);
 
   // Validasi form
   const isFormComplete = () => {
@@ -209,10 +240,7 @@ export default function PenguatanKarir() {
           onClose={() => setIsModalOpen(false)}
           title={`Ini adalah karier yang harus ${nama || "User"} tekuni`}
           deskripsi="Berdasarkan jawaban kamu, berikut ini adalah rekomendasi karier yang sangat cocok untuk kepribadian dan minat kamu:"
-          rekomendasi={[
-            "Kamu sangat cocok menjadi seorang Software Engineer karena kamu memiliki kemampuan analisis yang kuat, suka memecahkan masalah, dan mampu bekerja mandiri maupun dalam tim.",
-            "Pilihan lainnya adalah menjadi seorang Data Analyst yang fokus dalam menganalisis dan menginterpretasi data untuk menghasilkan keputusan strategis.",
-          ]}
+          rekomendasi={[kalimat]}
         />
       </div>
 
