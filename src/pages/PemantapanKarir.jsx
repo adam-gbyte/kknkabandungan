@@ -66,6 +66,7 @@ export default function PenguatanKarir() {
 
   const handleLihatHasil = () => {
     setIsModalOpen(true);
+    Gemini();
   };
 
   const kalimat = buatKalimatUntukGemini({
@@ -99,7 +100,7 @@ export default function PenguatanKarir() {
   const [loading, setLoading] = useState(false);
 
   async function Gemini() {
-    loading(true);
+    setLoading(true);
     try {
       const response = await ai.models.generateContent({
         model: "gemini-1.5-flash",
@@ -265,7 +266,7 @@ export default function PenguatanKarir() {
         <Modal
           isOpen={isModalOpen}
           onClose={() => setIsModalOpen(false)}
-          title={`Ini adalah karier yang harus ${nama || "User"} tekuni`}
+          title={`Karier yang harus ${nama || "User"} tekuni`}
           deskripsi="Berdasarkan jawaban kamu, berikut ini adalah rekomendasi karier yang sangat cocok untuk kepribadian dan minat kamu:"
           rekomendasi={[text]}
         />
