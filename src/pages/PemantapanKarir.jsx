@@ -12,6 +12,7 @@ import KepribadianDanGayaBelajar from "../components/form/KepribadianDanGayaBela
 import TujuanDanHarapanKarir from "../components/form/TujuanDanHarapanKarir";
 import AktivitasSekolahDanNonformal from "../components/form/AktivitasSekolahDanNonformal";
 import PreferensiKarir from "../components/form/PreferensiKarir";
+import Modal from "../components/Modal";
 
 export default function PenguatanKarir() {
   // Minat dan Hobi
@@ -51,6 +52,13 @@ export default function PenguatanKarir() {
 
   // NAMA
   const [nama, setNama] = useState("");
+
+  // MODAL
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleLihatHasil = () => {
+    setIsModalOpen(true);
+  };
 
   // TABS
   const tabData = [
@@ -167,6 +175,25 @@ export default function PenguatanKarir() {
           </div>
         </div>
         <Tabs tabs={tabData} />
+
+        <button
+          onClick={handleLihatHasil}
+          className="bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-xl shadow"
+        >
+          Lihat Rekomendasi
+        </button>
+
+        <Modal
+          isOpen={isModalOpen}
+          onClose={() => setIsModalOpen(false)}
+          title="Ini adalah karier atau jurusan yang harus kamu tekuni"
+          deskripsi="Berikut ini hasil rekomendasi karier dan jurusan berdasarkan pilihan kamu:"
+          rekomendasi={[
+            "Data Analyst",
+            "Psikolog Pendidikan",
+            "Software Developer",
+          ]}
+        />
       </div>
 
       <Footer />
