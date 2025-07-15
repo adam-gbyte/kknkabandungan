@@ -9,6 +9,7 @@ import Footer from "../components/Footer";
 import MinatDanHobi from "../components/form/MinatDanHobi";
 import KeterampilanDanSkill from "../components/form/KeterampilanDanSkill";
 import KepribadianDanGayaBelajar from "../components/form/KepribadianDanGayaBelajar";
+import TujuanDanHarapanKarir from "../components/form/TujuanDanHarapanKarir";
 
 export default function PenguatanKarir() {
   // Minat dan Hobi
@@ -34,6 +35,8 @@ export default function PenguatanKarir() {
   const [mySelfLainnya, setMySelfLainnya] = useState("");
 
   // Tujuan & Harapan Karier
+  const [karier, setKarier] = useState([]);
+  const [karierLainnya, setkarierLainnya] = useState("");
 
   // Aktivitas Sekolah & NonFormal
 
@@ -108,7 +111,14 @@ export default function PenguatanKarir() {
     },
     {
       label: "Tujuan & Harapan Karier",
-      content: <p>Ini adalah isi dari Tab Tujuan & Harapan Karier</p>,
+      content: (
+        <TujuanDanHarapanKarir
+          karier={karier}
+          setKarier={setKarier}
+          karierLainnya={karierLainnya}
+          setKarierLainnya={setKarirLainnya}
+        />
+      ),
     },
     {
       label: "Aktivitas Sekolah & Nonformal",

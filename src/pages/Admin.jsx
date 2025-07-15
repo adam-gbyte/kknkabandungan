@@ -2,11 +2,10 @@ import { useSearchParams, Navigate } from "react-router-dom";
 
 export default function Admin() {
   const [searchParams] = useSearchParams();
-  const adminParam = searchParams.get("admin");
+  const passwordParam = searchParams.get("pass");
 
-  if (adminParam !== "admin123") {
-    // Redirect ke halaman lain jika tidak ada query param yang benar
-    return <Navigate to="/" replace />;
+  if (passwordParam !== "password123") {
+    return <Navigate to="/pemantapan-karir" replace />;
   }
 
   return <p>Ini adalah admin</p>;

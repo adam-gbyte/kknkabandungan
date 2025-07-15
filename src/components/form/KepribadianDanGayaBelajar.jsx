@@ -10,9 +10,9 @@ export default function KepribadianDanGayaBelajar({
   gayaBelajarLainnya,
   setGayaBelajarLainnya = () => {},
   mySelf,
-  setMySelf,
+  setMySelf = () => {},
   mySelfLainnya,
-  setMySelfLainnya,
+  setMySelfLainnya = () => {},
 }) {
   return (
     <>
