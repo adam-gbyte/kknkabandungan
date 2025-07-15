@@ -8,8 +8,6 @@ export default function RawWithConditionalInput({
   const [jawaban, setJawaban] = useState("");
   const [citaCita, setCitaCita] = useState("");
 
-  //   const options = ["Ya", "Belum", "Masih bingung"];
-
   return (
     <div className="mb-6 bg-gray-100 p-4 rounded shadow">
       <label className="block font-bold mb-2">{label}</label>
