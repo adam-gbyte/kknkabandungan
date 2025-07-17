@@ -18,9 +18,9 @@ export default function MinatDanHobi({
   return (
     <>
       {/* Minat dan Hobi */}
-      <label className="block mb-4">
-        <span className="font-bold">Minat dan Hobi</span>
-      </label>
+      <div className=" mb-4">
+        <h1 className="font-bold text-2xl text-center">Minat dan Hobi</h1>
+      </div>
       <CheckboxGroup
         label="Pilih aktivitas favoritmu"
         soal="Kegiatan apa yang paling kamu sukai di waktu luang?"

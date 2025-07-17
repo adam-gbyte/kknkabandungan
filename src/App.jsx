@@ -13,7 +13,7 @@ import Admin from "./pages/Admin";
 export default function App() {
   return (
     <BrowserRouter>
-      <div className="flex min-h-screen bg-gray-50">
+      <div className="flex min-h-screen">
         {/* Navbar */}
         <Navbar />
         {/* Main Content */}
@@ -26,6 +26,7 @@ export default function App() {
             <Route path="/pemantapan-karir" element={<PemantapanKarir />} />
             <Route path="/admin" element={<Admin />} />
 
+            {/* Hapus aja nanti */}
             <Route path="/karier-form" element={<KarierForm />} />
             <Route path="/gemini-test" element={<GeminiTest />} />
             <Route path="/llama-test" element={<LlamaTest />} />

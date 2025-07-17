@@ -38,7 +38,7 @@ export default function KeterampilanDanSkill({
 
       <Scale
         minNum={1}
-        maxNum={5}
+        maxNum={100}
         soal="Seberapa percaya diri kamu dengan skill tersebut?"
         label="Penilaian Diri"
         value={skorSkill}

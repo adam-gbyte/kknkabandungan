@@ -1,3 +1,4 @@
+import { Check } from "lucide-react";
 import React, { useEffect, useState } from "react";
 
 export default function CheckboxGroup({
@@ -11,6 +12,7 @@ export default function CheckboxGroup({
   onChangeLainnya = () => {},
 }) {
   const [lainnyaChecked, setLainnyaChecked] = useState(false);
+  const [on, setOn] = useState(false);
 
   const handleCheckboxChange = (option) => {
     if (selectedOptions.includes(option)) {
@@ -41,6 +43,7 @@ export default function CheckboxGroup({
 
   const handleCheckboxLainnya = (checked) => {
     setLainnyaChecked(checked);
+    setOn(checked);
     if (!checked) {
       onChange(selectedOptions.filter((item) => options.includes(item)));
       onChangeLainnya("");
@@ -50,39 +53,52 @@ export default function CheckboxGroup({
   };
 
   return (
-    <div className="mb-4 bg-gray-100 p-4 rounded shadow">
-      <label className="block font-bold mb-2">{label}</label>
-      {soal && <p className="font-semibold mb-2">{soal}</p>}
+    <div className="mb-4 bg-white p-6 rounded shadow-lg">
+      <label className="block uppercase font-semibold mb-4">{label}</label>
+      {soal && <p className="font-normal mb-4">{soal}</p>}
       <div className="space-y-2">
         {options.map((option, index) => (
-          <label key={index} className="flex items-center space-x-2">
+          <label
+            key={index}
+            className={`${selectedOptions.includes(option) && "border border-blue-200 bg-blue-100/50"} flex items-center space-x-2 bg-blue-50/50 py-2 px-4 rounded-md hover:bg-blue-50/70 `}
+          >
             <input
               type="checkbox"
+              hidden
               checked={selectedOptions.includes(option)}
               onChange={() => handleCheckboxChange(option)}
               className="form-checkbox text-blue-600"
             />
+            <div
+              className={`w-4 h-4 border rounded-xs ${selectedOptions.includes(option) && "bg-blue-200 border-none"}`}
+            >
+              <Check width={16} height={16} className="text-white" />
+            </div>
             <span>{option}</span>
           </label>
         ))}
 
         {showLainnya && (
           <div className="mt-2">
-            <label className="flex items-center space-x-2">
+            <label
+              className={`${on && "border border-blue-200 bg-blue-100/50"} flex items-center space-x-2 bg-blue-50/50 py-2 px-4 rounded-md hover:bg-blue-50/70 `}
+            >
               <input
                 type="checkbox"
                 checked={lainnyaChecked}
                 onChange={(e) => handleCheckboxLainnya(e.target.checked)}
                 className="form-checkbox text-blue-600"
               />
-              <span>Lainnya:</span>
-              <input
-                type="text"
-                value={valueLainnya}
-                onChange={(e) => onChangeLainnya(e.target.value)}
-                className="ml-2 border rounded px-2 py-1 w-full"
-                placeholder="Tulis jawaban lain"
-              />
+              {!on && <span>Lainnya...</span>}
+              {on && (
+                <input
+                  type="text"
+                  value={valueLainnya}
+                  onChange={(e) => onChangeLainnya(e.target.value)}
+                  className="ml-2 border rounded px-2 py-1 w-full"
+                  placeholder="Tulis jawaban lain"
+                />
+              )}
             </label>
           </div>
         )}

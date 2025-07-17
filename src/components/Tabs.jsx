@@ -12,17 +12,17 @@ export default function Tabs({ tabs = [] }) {
   };
 
   return (
-    <div className="w-full max-w-3xl mx-auto">
+    <div className="w-full max-w-3xl mx-auto ">
       {/* Tab Header */}
-      <div className="overflow-x-auto whitespace-nowrap">
-        <div className="inline-flex space-x-8">
+      <div className="overflow-x-auto p-4  whitespace-nowrap hide-scrollbar">
+        <div className="inline-flex space-x-2">
           {tabs.map((tab, index) => (
             <button
               key={index}
               onClick={() => setActiveIndex(index)}
-              className={`px-4 py-4 text-sm font-medium bg-gray-100 rounded-t-md transition-all duration-200 ${
+              className={`px-8 py-4 text-sm font-medium bg-gray-100 rounded-md transition-all duration-200 ${
                 activeIndex === index
-                  ? "bg-white shadow text-blue-600"
+                  ? "bg-white shadow-lg text-blue-600"
                   : "text-gray-500 hover:text-blue-500"
               }`}
             >
@@ -33,9 +33,7 @@ export default function Tabs({ tabs = [] }) {
       </div>
 
       {/* Tab Content */}
-      <div className="p-2 bg-white rounded-b-lg shadow-md">
-        {tabs[activeIndex]?.content}
-      </div>
+      <div className="px-4 py-2 rounded-lg ">{tabs[activeIndex]?.content}</div>
 
       {/* Navigation Buttons */}
       <div className="flex justify-between mt-4">

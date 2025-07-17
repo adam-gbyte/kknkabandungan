@@ -1,8 +1,5 @@
 // PeguatanKarir.jsx
 import { useState } from "react";
-import Dropdown from "../components/Dropdown";
-import Scale from "../components/Scale";
-import CheckboxGroup from "../components/CheckboxGroup";
 import Tabs from "../components/Tabs";
 
 import Footer from "../components/Footer";
@@ -34,7 +31,7 @@ export default function PenguatanKarir() {
   // Keterampilan / Skill Saat Ini
   const [skill, setSkill] = useState([]);
   const [skillLainnya, setSkillLainnya] = useState("");
-  const [skorSkill, setSkorSkill] = useState(3);
+  const [skorSkill, setSkorSkill] = useState(60);
   const [belajar, setBelajar] = useState("Tidak");
 
   // Kepribadian & Gaya Belajar / Kerja
@@ -262,6 +259,8 @@ export default function PenguatanKarir() {
           </div>
         </div>
         <Tabs tabs={tabData} />
+
+        {loading && <p className="">Loading...</p>}
 
         <Modal
           isOpen={isModalOpen}
