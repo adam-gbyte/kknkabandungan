@@ -20,7 +20,7 @@ export default function Tabs({ tabs = [] }) {
             <button
               key={index}
               onClick={() => setActiveIndex(index)}
-              className={`px-8 py-4 text-sm font-medium bg-gray-100 rounded-md transition-all duration-200 ${
+              className={`px-8 py-4 text-sm cursor-pointer font-medium bg-gray-100 rounded-md transition-all duration-200 ${
                 activeIndex === index
                   ? "bg-white shadow-lg text-blue-600"
                   : "text-gray-500 hover:text-blue-500"

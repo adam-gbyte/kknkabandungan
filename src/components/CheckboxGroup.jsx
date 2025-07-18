@@ -70,7 +70,7 @@ export default function CheckboxGroup({
               className="form-checkbox text-blue-600"
             />
             <div
-              className={`w-4 h-4 border rounded-xs ${selectedOptions.includes(option) && "bg-blue-200 border-none"}`}
+              className={`w-4 h-4 border rounded-xs ${selectedOptions.includes(option) && "bg-blue-400 border-none"}`}
             >
               <Check width={16} height={16} className="text-white" />
             </div>
@@ -86,16 +86,23 @@ export default function CheckboxGroup({
               <input
                 type="checkbox"
                 checked={lainnyaChecked}
+                hidden
                 onChange={(e) => handleCheckboxLainnya(e.target.checked)}
                 className="form-checkbox text-blue-600"
               />
+
+              <div
+                className={`w-4 h-4 border rounded-xs ${on && "bg-blue-400 border-none"}`}
+              >
+                <Check width={16} height={16} className="text-white" />
+              </div>
               {!on && <span>Lainnya...</span>}
               {on && (
                 <input
                   type="text"
                   value={valueLainnya}
                   onChange={(e) => onChangeLainnya(e.target.value)}
-                  className="ml-2 border rounded px-2 py-1 w-full"
+                  className="ml-2 border rounded px-2 py-1 w-full border-none ring-0 focus:outline-none"
                   placeholder="Tulis jawaban lain"
                 />
               )}

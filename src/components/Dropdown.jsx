@@ -1,3 +1,6 @@
+import { ChevronDown } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
+
 export default function Dropdown({
   soal = "",
   label = "",
@@ -8,24 +11,51 @@ export default function Dropdown({
   valueLainnya = "",
   onChangeLainnya = () => {},
 }) {
+  const [open, setOpen] = useState(false);
+  const dropdownRef = useRef(null);
+
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setOpen(false);
+      }
+    }
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
   return (
-    <div className="mb-4 bg-gray-100 p-4 rounded shadow">
+    <div className="mb-4 bg-white p-4 rounded shadow-xl">
       <label className="block mb-4">
-        <span className="font-bold">{label}</span>
-        {soal && <p className="text-2lg">{soal}</p>}
-        <select
-          className="w-full border p-2 mt-1 rounded"
-          value={value}
-          onChange={(e) => onChange(e.target.value)}
+        <h2 className="font-semibold uppercase mb-4">{label}</h2>
+        {soal && <p className="mb-2">{soal}</p>}
+        <div
+          ref={dropdownRef}
+          className="flex justify-between items-center relative py-2 px-4 bg-blue-50/50 rounded-md border-2 border-blue-200"
+          onClick={() => setOpen(!open)}
         >
-          <option value="">-- Pilih {label} --</option>
-          {options.map((option) => (
-            <option key={option} value={option}>
-              {option}
-            </option>
-          ))}
-          {showLainnya && <option value="Lainnya">Lainnya</option>}
-        </select>
+          <p>{value || `-- Pilih ${label} --`}</p>
+          <div>
+            <ChevronDown
+              className={`${open ? "rotate-180" : ""} transition duration-200`}
+            />
+          </div>
+          <div
+            className={`absolute overflow-hidden shadow-xl top-12 z-10 rounded-md bg-white w-full left-0 ${open ? "" : "hidden"} `}
+          >
+            {options.map((option, i) => (
+              <div
+                key={i}
+                className="hover:bg-blue-50/50 px-4 py-2"
+                onClick={() => onChange(option)}
+              >
+                {option}
+              </div>
+            ))}
+          </div>
+        </div>
 
         {value === "Lainnya" && showLainnya && (
           <input
