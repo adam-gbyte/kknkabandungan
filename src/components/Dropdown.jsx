@@ -33,13 +33,13 @@ export default function Dropdown({
         {soal && <p className="mb-2">{soal}</p>}
         <div
           ref={dropdownRef}
-          className="flex justify-between items-center relative py-2 px-4 bg-blue-50/50 rounded-md border-2 border-blue-200"
+          className="flex justify-between items-center relative py-2 px-4 bg-blue-50/50 rounded-md border border-blue-200"
           onClick={() => setOpen(!open)}
         >
           <p>{value || `-- Pilih ${label} --`}</p>
           <div>
             <ChevronDown
-              className={`${open ? "rotate-180" : ""} transition duration-200`}
+              className={`${open ? "rotate-180" : ""} text-blue-400 transition duration-200`}
             />
           </div>
           <div

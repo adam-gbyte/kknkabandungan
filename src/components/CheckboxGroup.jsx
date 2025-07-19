@@ -60,14 +60,14 @@ export default function CheckboxGroup({
         {options.map((option, index) => (
           <label
             key={index}
-            className={`${selectedOptions.includes(option) && "border border-blue-200 bg-blue-100/50"} flex items-center space-x-2 bg-blue-50/50 py-2 px-4 rounded-md hover:bg-blue-50/70 `}
+            className={`${selectedOptions.includes(option) && "border border-blue-200 bg-blue-100/50"} cursor-pointer flex items-center space-x-2 bg-blue-50/50 py-2 px-4 rounded-md hover:bg-blue-50/70 `}
           >
             <input
               type="checkbox"
               hidden
               checked={selectedOptions.includes(option)}
               onChange={() => handleCheckboxChange(option)}
-              className="form-checkbox text-blue-600"
+              className="form-checkbox cursor-pointer text-blue-600"
             />
             <div
               className={`w-4 h-4 border rounded-xs ${selectedOptions.includes(option) && "bg-blue-400 border-none"}`}

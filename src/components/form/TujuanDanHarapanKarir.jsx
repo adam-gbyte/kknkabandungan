@@ -11,7 +11,7 @@ export default function TujuanDanHarapanKarir({
   return (
     <>
       <CheckboxGroup
-        label="Paling pemting dalam karier"
+        label="Paling penting dalam karier"
         soal="Apa yang paling penting dalam karier nanti?"
         selectedOptions={karier}
         onChange={setKarier}

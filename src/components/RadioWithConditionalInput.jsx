@@ -9,11 +9,14 @@ export default function RawWithConditionalInput({
   const [citaCita, setCitaCita] = useState("");
 
   return (
-    <div className="mb-6 bg-gray-100 p-4 rounded shadow">
-      <label className="block font-bold mb-2">{label}</label>
-      <div className="space-x-4 mb-4">
+    <div className="mb-6 bg-white p-4 rounded shadow-xl">
+      <label className="block font-semibold uppercase mb-4">{label}</label>
+      <div className="space-x-2 mb-4">
         {options.map((opt) => (
-          <label key={opt} className="inline-flex items-center">
+          <label
+            key={opt}
+            className="inline-flex bg-blue-50/50 hover:bg-blue-100/50 cursor-pointer py-2 px-4 rounded-md  items-center"
+          >
             <input
               type="radio"
               value={opt}
