@@ -58,7 +58,11 @@ export default function Navbar() {
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle Menu"
         >
-          {isOpen ? <X size={26} /> : <Menu size={26} />}
+          {isOpen ? (
+            <X size={26} className="cursor-pointer" />
+          ) : (
+            <Menu size={26} className="cursor-pointer" />
+          )}
         </button>
       </div>
 

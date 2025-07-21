@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 export default function Beranda() {
   return (
     <>
-      <div className="min-h-screen shadow-xl flex flex-col md:flex-row items-center justify-between px-15 md:px-16 py-10 bg-gradient-to-b rounded-2xl from-white to-blue-50">
+      <div className="min-h-screen shadow-xl flex flex-col md:flex-row items-center justify-between p-5 bg-gradient-to-b rounded-2xl from-white to-blue-50">
         {/* Kiri: Teks */}
         <div className="md:w-1/2 text-center md:text-left">
           <h1 className="text-4xl font-extrabold text-blue-700 leading-tight drop-shadow-sm">
