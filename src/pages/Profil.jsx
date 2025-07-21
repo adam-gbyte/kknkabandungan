@@ -19,17 +19,17 @@ const tabs = [
   { label: "Acara", key: "acara" },
 ];
 
-const CardAnggota = ({ nama, foto }) => (
-  <div className="flex flex-row w-64 bg-white border border-gray-200 rounded-lg shadow-md overflow-hidden max-w-full">
-    <div className="flex-shrink-0 border-r border-gray-100 w-full h-full">
+function CardAnggota({ nama, foto, className = "" }) {
+  return (
+    <div className={`p-4 shadow ${className}`}>
       <img
         src={foto}
         alt={nama}
-        className="w-full h-full object-cover object-center"
+        className="w-64 rounded-lg mx-auto object-cover mb-3"
       />
     </div>
-  </div>
-);
+  );
+}
 
 export default function Profil() {
   const [activeTab, setActiveTab] = useState("ketua");
@@ -130,9 +130,13 @@ export default function Profil() {
             ))}
           </div> */}
 
-          <div className="flex flex-col items-center gap-4">
+          <div className="flex flex-col items-center px-4 sm:px-6 py-6 gap-6">
             {anggota[activeTab].map((orang, i) => (
-              <CardAnggota key={i} {...orang} />
+              <CardAnggota
+                key={i}
+                {...orang}
+                className="w-full max-w-xs sm:max-w-sm"
+              />
             ))}
           </div>
         </section>
