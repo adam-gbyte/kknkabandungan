@@ -4,12 +4,10 @@ export default function RekomendasiFlexible({ data }) {
   const rekomendasi = data.rekomendasi || data;
 
   return (
-    <div className="p-6 bg-white shadow-md rounded-lg space-y-6">
+    <div className="">
       {Object.entries(rekomendasi).map(([key, value], index) => (
         <div key={index}>
-          <h3 className="text-lg font-bold capitalize mb-1">
-            {formatKey(key)}
-          </h3>
+          <h3 className="text-lg font-bold capitalize">{formatKey(key)}</h3>
 
           {Array.isArray(value) ? (
             <ul className="list-disc list-inside space-y-1">

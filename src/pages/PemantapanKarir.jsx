@@ -244,8 +244,8 @@ export default function PenguatanKarir() {
 
   return (
     <>
-      <div className="space-y-4 p-2 mx-auto">
-        <h1 className="text-center text-3xl font-bold mb-4">
+      <div className="space-y-2 mx-auto">
+        <h1 className="text-center text-4xl font-bold mb-4">
           Pemantapan Karir
         </h1>
         <div className="w-full max-w-3xl mx-auto">
@@ -266,7 +266,7 @@ export default function PenguatanKarir() {
         </div>
         <Tabs tabs={tabData} />
 
-        {loading && <p className="">Loading...</p>}
+        {loading && <p className="z-60">Loading...</p>}
 
         <Modal
           isOpen={isModalOpen}

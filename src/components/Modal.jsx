@@ -17,16 +17,16 @@ export default function Modal({
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm transition-all">
-      <div className="bg-white rounded-2xl shadow-xl max-w-3xl w-full mx-4 p-6 relative animate-fade-in max-h-[90vh] overflow-y-auto">
+      <div className="bg-white rounded-2xl shadow-xl max-w-3xl w-full mx-2 p-3 relative animate-fade-in max-h-xl overflow-y-auto">
         <button
           onClick={onClose}
           className="absolute top-2 right-3 text-gray-600 hover:text-red-500 text-xl font-bold"
         >
           <X />
         </button>
-        <h2 className="text-xl font-semibold mb-2 text-blue-700">{title}</h2>
-        <p className="text-sm text-gray-700 mb-4">{deskripsi}</p>
-        <ul className="space-y-2 list-disc pl-5 text-gray-800 text-justify leading-relaxed max-h-[300px] overflow-y-auto pr-2">
+        <h2 className="text-xl font-semibold  text-blue-700">{title}</h2>
+        <p className="text-sm text-gray-700 ">{deskripsi}</p>
+        <ul className="inset-shadow-sm rounded-xl p-4 space-y-2 list-disc text-gray-800 text-justify leading-relaxed max-h-[300px] hide-scrollbar overflow-y-auto">
           <RekomendasiFlexible data={rekomendasi} />
         </ul>
       </div>
