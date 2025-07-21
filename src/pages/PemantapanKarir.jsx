@@ -93,7 +93,7 @@ export default function PenguatanKarir() {
     lulus,
   });
 
-  const [text, setText] = useState("");
+  const [text, setText] = useState({});
   const [loading, setLoading] = useState(false);
 
   async function Gemini() {
@@ -105,27 +105,13 @@ export default function PenguatanKarir() {
         contents: kalimat,
         config: {
           responseMimeType: "application/json",
-          responseSchema: {
-            type: Type.ARRAY,
-            items: {
-              type: Type.OBJECT,
-              properties: {
-                rekomendasi: {
-                  type: Type.STRING,
-                },
-              },
-              propertyOrdering: ["rekomedasi"],
-            },
-          },
         },
       });
 
       const responseText = response.text;
-      console.log("Response text : ", responseText);
       const textParsed = JSON.parse(responseText);
-      console.log("Text parsed : ", textParsed);
 
-      setText(responseText);
+      setText(textParsed);
     } catch (error) {
       console.error(
         "Terjadi error saat mengakses Gemini:",
@@ -287,7 +273,7 @@ export default function PenguatanKarir() {
           onClose={() => setIsModalOpen(false)}
           title={`Karier yang harus ${nama || "User"} tekuni`}
           deskripsi="Berdasarkan jawaban kamu, berikut ini adalah rekomendasi karier yang sangat cocok untuk kepribadian dan minat kamu:"
-          rekomendasi={[text]}
+          rekomendasi={text}
         />
       </div>
 

@@ -1,11 +1,12 @@
 import { useEffect } from "react";
 import { X } from "lucide-react";
+import RekomendasiFlexible from "./ui/Output";
 
 export default function Modal({
   isOpen,
   onClose,
   title = "Rekomendasi",
-  rekomendasi = [],
+  rekomendasi,
   deskripsi = "",
 }) {
   useEffect(() => {
@@ -26,9 +27,7 @@ export default function Modal({
         <h2 className="text-xl font-semibold mb-2 text-blue-700">{title}</h2>
         <p className="text-sm text-gray-700 mb-4">{deskripsi}</p>
         <ul className="space-y-2 list-disc pl-5 text-gray-800 text-justify leading-relaxed max-h-[300px] overflow-y-auto pr-2">
-          {rekomendasi.map((item, index) => (
-            <li key={index}>{item}</li>
-          ))}
+          <RekomendasiFlexible data={rekomendasi} />
         </ul>
       </div>
     </div>
