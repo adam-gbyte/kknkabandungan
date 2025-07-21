@@ -1,46 +1,51 @@
 @import "tailwindcss";
 
+/* DEBUG */
+* {
+  outline: 1px solid rgba(255, 0, 0) !important;
+}
+
 .hide-scrollbar::-webkit-scrollbar {
-    display: none;
-}   
+  display: none;
+}
 
 .slider {
-    width: 100%;
-  }
+  width: 100%;
+}
 
-  /* Track */
-  .slider::-webkit-slider-runnable-track {
-    height: 4px;
-    background: #3b82f6; /* Tailwind blue-500 */
-    border-radius: 2px;
-  }
+/* Track */
+.slider::-webkit-slider-runnable-track {
+  height: 4px;
+  background: #3b82f6; /* Tailwind blue-500 */
+  border-radius: 2px;
+}
 
-  /* Thumb */
-  .slider::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    height: 16px;
-    width: 16px;
-    border-radius: 50%;
-    background: #3b82f6;
-    cursor: pointer;
-    margin-top: -6px; /* Untuk centering thumb ke track */
-  }
+/* Thumb */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: #3b82f6;
+  cursor: pointer;
+  margin-top: -6px; /* Untuk centering thumb ke track */
+}
 
-  .slider:focus::-webkit-slider-runnable-track {
-    background: #2563eb; /* Tailwind blue-600 saat fokus */
-  }
+.slider:focus::-webkit-slider-runnable-track {
+  background: #2563eb; /* Tailwind blue-600 saat fokus */
+}
 
-  /* Firefox */
-  .slider::-moz-range-track {
-    height: 4px;
-    background: #3b82f6;
-    border-radius: 2px;
-  }
+/* Firefox */
+.slider::-moz-range-track {
+  height: 4px;
+  background: #3b82f6;
+  border-radius: 2px;
+}
 
-  .slider::-moz-range-thumb {
-    height: 16px;
-    width: 16px;
-    border-radius: 50%;
-    background: #3b82f6;
-    cursor: pointer;
-  }
+.slider::-moz-range-thumb {
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  background: #3b82f6;
+  cursor: pointer;
+}

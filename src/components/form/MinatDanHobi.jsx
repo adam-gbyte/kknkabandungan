@@ -18,7 +18,7 @@ export default function MinatDanHobi({
   return (
     <>
       {/* Minat dan Hobi */}
-      <div className=" mb-4">
+      <div className="mb-4">
         <h1 className="font-bold text-2xl text-center">Minat dan Hobi</h1>
       </div>
       <CheckboxGroup
