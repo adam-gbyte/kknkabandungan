@@ -13,7 +13,7 @@ import Modal from "../components/Modal";
 
 import buatKalimatUntukGemini from "../components/Kalimat";
 
-import { GoogleGenAI } from "@google/genai";
+import { GoogleGenAI, Type } from "@google/genai";
 
 const ai = new GoogleGenAI({
   apiKey: import.meta.env.VITE_GEMINI_API_KEY,
@@ -100,11 +100,31 @@ export default function PenguatanKarir() {
     setLoading(true);
     try {
       const response = await ai.models.generateContent({
-        model: "gemini-1.5-flash",
-        contents: [{ role: "user", parts: [{ text: kalimat }] }],
+        model: "gemini-2.5-flash",
+        // contents: [{ role: "user", parts: [{ text: kalimat }] }],
+        contents: kalimat,
+        config: {
+          responseMimeType: "application/json",
+          responseSchema: {
+            type: Type.ARRAY,
+            items: {
+              type: Type.OBJECT,
+              properties: {
+                rekomendasi: {
+                  type: Type.STRING,
+                },
+              },
+              propertyOrdering: ["rekomedasi"],
+            },
+          },
+        },
       });
 
-      const responseText = await response.text;
+      const responseText = response.text;
+      console.log("Response text : ", responseText);
+      const textParsed = JSON.parse(responseText);
+      console.log("Text parsed : ", textParsed);
+
       setText(responseText);
     } catch (error) {
       console.error(
