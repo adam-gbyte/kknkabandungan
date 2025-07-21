@@ -9,7 +9,7 @@ export default function Galeri() {
   const [showAll, setShowAll] = useState(false);
   const [selectedImage, setSelectedImage] = useState(null);
 
-  const displayedGaleri = showAll ? grupGaleri : grupGaleri.slice(0, 5);
+  const displayedGaleri = showAll ? grupGaleri : grupGaleri.slice(0, 2);
 
   return (
     <>

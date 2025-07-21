@@ -40,7 +40,7 @@ export default function Tabs({ tabs = [] }) {
         <button
           onClick={handlePrev}
           disabled={activeIndex === 0}
-          className={`px-4 py-2 rounded font-semibold ${
+          className={`px-4 cursor-pointer py-2 rounded font-semibold ${
             activeIndex === 0
               ? "bg-gray-200 text-gray-400 cursor-not-allowed"
               : "bg-blue-500 text-white hover:bg-blue-600"
@@ -51,7 +51,7 @@ export default function Tabs({ tabs = [] }) {
         <button
           onClick={handleNext}
           disabled={activeIndex === tabs.length - 1}
-          className={`px-4 py-2 rounded font-semibold ${
+          className={`cursor-pointer px-4 py-2 rounded font-semibold ${
             activeIndex === tabs.length - 1
               ? "bg-gray-200 text-gray-400 cursor-not-allowed"
               : "bg-blue-500 text-white hover:bg-blue-600"
