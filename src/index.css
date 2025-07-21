@@ -1,9 +1,9 @@
 @import "tailwindcss";
 
 /* DEBUG */
-* {
+/* * {
   outline: 1px solid rgba(255, 0, 0) !important;
-}
+} */
 
 .hide-scrollbar::-webkit-scrollbar {
   display: none;

@@ -32,10 +32,12 @@ export const grupGaleri = [
   {
     tanggal: "2025-07-09",
     foto: [
-      "/images/galeri/umkm1.jpg",
-      "/images/galeri/umkm2.jpg",
-      "/images/galeri/umkm3.jpg",
-      "/images/galeri/umkm4.jpg",
+      "https://ik.imagekit.io/goldiron/KEGIATAN/RABU-09-JULI-2025/IMG_9498.JPG?updatedAt=1753081296357",
+      "https://ik.imagekit.io/goldiron/KEGIATAN/RABU-09-JULI-2025/IMG_9531.JPG?updatedAt=1753081297395",
+      "https://ik.imagekit.io/goldiron/KEGIATAN/RABU-09-JULI-2025/IMG_9525.JPG?updatedAt=1753081299044",
+      "https://ik.imagekit.io/goldiron/KEGIATAN/RABU-09-JULI-2025/IMG_9408.JPG?updatedAt=1753081295629",
+      "https://ik.imagekit.io/goldiron/KEGIATAN/RABU-09-JULI-2025/IMG_9431.JPG?updatedAt=1753081291519",
+      "https://ik.imagekit.io/goldiron/KEGIATAN/RABU-09-JULI-2025/IMG_9465.JPG?updatedAt=1753081295004",
     ],
   },
   {
@@ -43,6 +45,9 @@ export const grupGaleri = [
     foto: [
       "https://ik.imagekit.io/goldiron/KEGIATAN/KAMIS-10-JULI-2025/1.jpeg?updatedAt=1752132570120",
       "https://ik.imagekit.io/goldiron/KEGIATAN/KAMIS-10-JULI-2025/2.jpeg?updatedAt=1752132570120",
+      "https://ik.imagekit.io/goldiron/KEGIATAN/KAMIS-10-JULI-2025/IMG20250710092959.jpg?updatedAt=1753082167701",
+      "https://ik.imagekit.io/goldiron/KEGIATAN/KAMIS-10-JULI-2025/IMG20250710125429.jpg?updatedAt=1753082167625",
+      "https://ik.imagekit.io/goldiron/KEGIATAN/KAMIS-10-JULI-2025/IMG20250710094526.jpg?updatedAt=1753082167143",
     ],
   },
   {
