@@ -10,7 +10,7 @@ export default function Navbar() {
     { name: "Beranda", path: "/", icon: <Home size={18} /> },
     { name: "Galeri", path: "/galeri", icon: <Image size={18} /> },
     { name: "Profil", path: "/profil", icon: <User size={18} /> },
-    { name: "Laporan", path: "/laporan", icon: <FileText size={18} /> },
+    // { name: "Laporan", path: "/laporan", icon: <FileText size={18} /> },
     {
       name: "Karir",
       path: "/pemantapan-karir",
