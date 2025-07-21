@@ -1,10 +1,28 @@
 export const grupGaleri = [
   {
+    tanggal: "2025-06-17",
+    foto: [
+      "https://ik.imagekit.io/goldiron/KEGIATAN/SURVEY/Survey.jpg?updatedAt=1753079318704",
+      "https://ik.imagekit.io/goldiron/KEGIATAN/SURVEY/Survey%202.jpg?updatedAt=1753079461578",
+    ],
+  },
+  {
+    tanggal: "2025-06-27",
+    foto: [
+      "https://ik.imagekit.io/goldiron/KEGIATAN/SURVEY%202/IMG-20250627-WA0004.jpg?updatedAt=1753079657863",
+      "https://ik.imagekit.io/goldiron/KEGIATAN/SURVEY%202/IMG-20250627-WA0014.jpg?updatedAt=1753079657625",
+      "https://ik.imagekit.io/goldiron/KEGIATAN/SURVEY%202/IMG-20250627-WA0011.jpg?updatedAt=1753079657582",
+    ],
+  },
+  {
     tanggal: "2025-07-07",
     foto: [
       "https://ik.imagekit.io/goldiron/KEGIATAN/SENIN-07-JULI-2025/1.jpeg?updatedAt=1751934115246",
       "https://ik.imagekit.io/goldiron/KEGIATAN/SENIN-07-JULI-2025/2.jpeg?updatedAt=1751935237216",
       "https://ik.imagekit.io/goldiron/KEGIATAN/SENIN-07-JULI-2025/3.jpeg?updatedAt=1751935237216",
+      "https://ik.imagekit.io/goldiron/KEGIATAN/SENIN-07-JULI-2025/IMG-20250707-WA0030.jpg?updatedAt=1753079918943",
+      "https://ik.imagekit.io/goldiron/KEGIATAN/SENIN-07-JULI-2025/IMG20250707100505.jpg?updatedAt=1753079919867",
+      "https://ik.imagekit.io/goldiron/KEGIATAN/SENIN-07-JULI-2025/IMG20250707100549.jpg?updatedAt=1753079920100",
     ],
   },
   {
