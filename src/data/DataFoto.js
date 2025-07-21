@@ -53,10 +53,8 @@ export const grupGaleri = [
   {
     tanggal: "2025-07-11",
     foto: [
-      "/images/galeri/umkm1.jpg",
-      "/images/galeri/umkm2.jpg",
-      "/images/galeri/umkm3.jpg",
-      "/images/galeri/umkm4.jpg",
+      "https://ik.imagekit.io/goldiron/KEGIATAN/JUMAT-11-JULI-2025/IMG-20250714-WA0018.jpg?updatedAt=1753087400573",
+      "https://ik.imagekit.io/goldiron/KEGIATAN/JUMAT-11-JULI-2025/IMG-20250714-WA0008.jpg?updatedAt=1753087399355",
     ],
   },
   {
