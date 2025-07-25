@@ -1,5 +1,4 @@
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
 
 export default function Tabs({ tabs = [] }) {
   const [activeIndex, setActiveIndex] = useState(0);
