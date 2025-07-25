@@ -261,25 +261,38 @@ export default function PenguatanKarir() {
         <h1 className="text-center text-4xl font-bold mb-4">
           Pemantapan Karir
         </h1>
-        <div className="w-full max-w-3xl mx-auto">
-          <div className="p-2">
-            <div className="mt-4">
-              <label className="flex items-center space-x-2">
-                <span>Nama:</span>
-                <input
-                  type="text"
-                  value={nama}
-                  onChange={(e) => setNama(e.target.value)}
-                  className="ml-2 border rounded m-4 px-2 py-1 w-full"
-                  placeholder="Nama anda..."
-                />
-              </label>
-            </div>
+        <div className="w-full max-w-2xl mx-auto px-4">
+          <div className="mt-6">
+            <label
+              htmlFor="nama"
+              className="block text-sm font-medium text-gray-700 mb-1"
+            >
+              Nama anda :
+            </label>
+            <input
+              id="nama"
+              type="text"
+              value={nama}
+              onChange={(e) => setNama(e.target.value)}
+              placeholder="Masukkan nama anda"
+              className="w-full px-4 py-2 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition duration-200"
+            />
           </div>
         </div>
         <Tabs tabs={tabData} />
 
-        {loading && <p className="z-60">Loading...</p>}
+        {loading && (
+          <div className="flex  z-90 items-center justify-center gap-2 py-4">
+            <div className="flex gap-1">
+              <div className="w-2 h-2 bg-blue-500 rounded-full animate-bounce [animation-delay:-0.3s]"></div>
+              <div className="w-2 h-2 bg-blue-500 rounded-full animate-bounce [animation-delay:-0.15s]"></div>
+              <div className="w-2 h-2 bg-blue-500 rounded-full animate-bounce"></div>
+            </div>
+            <span className="text-sm text-gray-600 font-medium">
+              Memuat data...
+            </span>
+          </div>
+        )}
 
         <Modal
           isOpen={isModalOpen}
