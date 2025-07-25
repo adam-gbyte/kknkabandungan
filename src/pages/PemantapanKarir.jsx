@@ -1,6 +1,13 @@
 // PeguatanKarir.jsx
 import { useState } from "react";
 import Tabs from "../components/Tabs";
+import {
+  Sparkles,
+  BrainCircuit,
+  Telescope,
+  BookOpen,
+  Briefcase,
+} from "lucide-react";
 
 import Footer from "../components/Footer";
 import MinatDanHobi from "../components/form/MinatDanHobi";
@@ -152,6 +159,7 @@ export default function PenguatanKarir() {
   const tabData = [
     {
       label: "Minat & Hobi",
+      icon: <Sparkles />,
       content: (
         <MinatDanHobi
           luang={luang}
@@ -171,6 +179,7 @@ export default function PenguatanKarir() {
     },
     {
       label: "Keterampilan & Skill",
+      icon: <BrainCircuit />,
       content: (
         <KeterampilanDanSkill
           skill={skill}
@@ -186,6 +195,7 @@ export default function PenguatanKarir() {
     },
     {
       label: "Kepribadian & Gaya Belajar",
+      icon: <BookOpen />,
       content: (
         <KepribadianDanGayaBelajar
           kepribadian={kepribadian}
@@ -205,6 +215,7 @@ export default function PenguatanKarir() {
     },
     {
       label: "Tujuan & Harapan Karier",
+      icon: <Telescope />,
       content: (
         <TujuanDanHarapanKarir
           karier={karier}
@@ -216,6 +227,7 @@ export default function PenguatanKarir() {
     },
     {
       label: "Aktivitas Sekolah & Nonformal",
+      icon: <BookOpen />,
       content: (
         <AktivitasSekolahDanNonformal
           kegiatan={kegiatan}
@@ -227,6 +239,7 @@ export default function PenguatanKarir() {
     },
     {
       label: "Referensi Karier",
+      icon: <Briefcase />,
       content: (
         <PreferensiKarir
           karir={karir}
