@@ -195,7 +195,7 @@ export default function PenguatanKarir() {
     },
     {
       label: "Kepribadian & Gaya Belajar",
-      icon: <BookOpen />,
+      icon: <Telescope />,
       content: (
         <KepribadianDanGayaBelajar
           kepribadian={kepribadian}

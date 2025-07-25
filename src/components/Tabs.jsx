@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion, AnimatePresence } from "framer-motion";
 
 export default function Tabs({ tabs = [] }) {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -20,13 +21,24 @@ export default function Tabs({ tabs = [] }) {
             <button
               key={index}
               onClick={() => setActiveIndex(index)}
-              className={`flex items-center gap-2 px-8 py-4 text-sm cursor-pointer font-medium bg-gray-100 rounded-md transition-all duration-200 ${
+              className={`flex items-center p-2 px-4 text-sm cursor-pointer font-medium bg-gray-100 rounded-md transition-all duration-200 ${
                 activeIndex === index
-                  ? "bg-white shadow-lg text-blue-600"
+                  ? "bg-white gap-2 shadow-lg text-blue-600"
                   : "text-gray-500 hover:text-blue-500"
               }`}
             >
-              {tab.icon} {activeIndex === index ? tab.label : ""}
+              <span className="transition-opacity duration-500">
+                {tab.icon}
+              </span>
+              <span
+                className={`transition-all duration-500 ease-in-out origin-left ${
+                  activeIndex === index
+                    ? "opacity-100 max-w-[200px] duration-300"
+                    : "opacity-0 max-w-0 overflow-hidden duration-75"
+                }`}
+              >
+                {tab.label}
+              </span>
             </button>
           ))}
         </div>
