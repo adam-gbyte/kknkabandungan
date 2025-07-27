@@ -33,8 +33,8 @@ export default function Tabs({ tabs = [] }) {
               <span
                 className={`
                   transition-all duration-300 ease-in-out origin-left
-                  group-hover:max-w-[200px] group-hover:opacity-100 group-hover:text-gray-500
-                  ${activeIndex === index ? "max-w-[200px] opacity-100" : "max-w-0 opacity-0 overflow-hidden"}
+                  group-hover:max-w-[200px] group-hover:opacity-100 group-hover:pr-2 group-hover:text-gray-500
+                  ${activeIndex === index ? "max-w-[200px] opacity-100 pr-2" : "max-w-0 opacity-0 overflow-hidden"}
                 `}
               >
                 {tab.label}
