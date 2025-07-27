@@ -4,6 +4,7 @@ import Tabs from "../components/Tabs";
 import {
   Sparkles,
   BrainCircuit,
+  User,
   Telescope,
   BookOpen,
   Briefcase,
@@ -195,7 +196,7 @@ export default function PenguatanKarir() {
     },
     {
       label: "Kepribadian & Gaya Belajar",
-      icon: <Telescope />,
+      icon: <User />,
       content: (
         <KepribadianDanGayaBelajar
           kepribadian={kepribadian}
