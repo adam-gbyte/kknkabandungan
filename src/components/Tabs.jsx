@@ -20,7 +20,7 @@ export default function Tabs({ tabs = [] }) {
             <button
               key={index}
               onClick={() => setActiveIndex(index)}
-              className={`group flex items-center p-2 px-4 text-sm cursor-pointer font-medium rounded-md transition-all duration-200
+              className={`group flex items-center p-2 text-sm cursor-pointer font-medium rounded-md transition-all duration-200
                 ${
                   activeIndex === index
                     ? "bg-white gap-2 shadow-lg text-blue-600"
@@ -32,10 +32,10 @@ export default function Tabs({ tabs = [] }) {
               </span>
               <span
                 className={`
-                  transition-all duration-300 ease-in-out origin-left ml-2
+                  transition-all duration-300 ease-in-out origin-left 
                   group-hover:max-w-[200px] group-hover:opacity-100
                   ${activeIndex === index ? "max-w-[200px] opacity-100" : "max-w-0 opacity-0 overflow-hidden"}
-              `}
+                `}
               >
                 {tab.label}
               </span>
