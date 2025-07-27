@@ -54,6 +54,7 @@ export default function MinatDanHobi({
           "Seni Budaya",
           "Pendidikan Jasmani",
           "Agama",
+          "Lainnya",
         ]}
         showLainnya={true}
         valueLainnya={pelajaranLainnya}
@@ -72,6 +73,7 @@ export default function MinatDanHobi({
           "Bisnis",
           "Pendidikan",
           "Psikologi",
+          "Lainnya",
         ]}
         showLainnya={true}
         valueLainnya={topikLainnya}

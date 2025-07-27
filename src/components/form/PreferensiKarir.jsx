@@ -29,6 +29,7 @@ export default function PreferensiKarir({
           "Kesehatan",
           "Bisnis/Keuangan",
           "Masih Bingung",
+          "Lainnya",
         ]}
         showLainnya={true}
         valueLainnya={karirLainnya}

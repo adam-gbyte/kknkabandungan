@@ -39,6 +39,7 @@ export default function KepribadianDanGayaBelajar({
           "Menonton video atau Tutorial",
           "Praktik langsung",
           "Berdiskusi dengan orang lain",
+          "Lainnya",
         ]}
         showLainnya={true}
         lainnya={gayaBelajarLainnya}
@@ -57,6 +58,7 @@ export default function KepribadianDanGayaBelajar({
           "Pendiam",
           "Cepat Bosan",
           "Disiplin",
+          "Lainnya",
         ]}
         showLainnya={true}
         lainnya={mySelfLainnya}
