@@ -9,6 +9,11 @@ export default function AktivitasSekolahDanNonformal({
 }) {
   return (
     <>
+      <div className="mb-4">
+        <h1 className="font-bold text-2xl text-center">
+          Aktivitas Sekolah & Nonformal
+        </h1>
+      </div>
       <CheckboxGroup
         label="Aktivitas"
         soal="Kegiatan apa yang pernah kamu ikuti di sekolah?"

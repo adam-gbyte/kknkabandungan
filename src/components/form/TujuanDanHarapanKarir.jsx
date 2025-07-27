@@ -10,6 +10,11 @@ export default function TujuanDanHarapanKarir({
   const options = ["Ya", "Belum", "Masih bingung"];
   return (
     <>
+      <div className="mb-4">
+        <h1 className="font-bold text-2xl text-center">
+          Tujuan & Harapan Karir
+        </h1>
+      </div>
       <CheckboxGroup
         label="Paling penting dalam karier"
         soal="Apa yang paling penting dalam karier nanti?"

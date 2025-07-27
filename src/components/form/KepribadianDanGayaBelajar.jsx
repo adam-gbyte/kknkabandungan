@@ -16,6 +16,11 @@ export default function KepribadianDanGayaBelajar({
 }) {
   return (
     <>
+      <div className="mb-4">
+        <h1 className="font-bold text-2xl text-center">
+          Kepribadian & Gaya Belajar
+        </h1>
+      </div>
       <Dropdown
         label="Bekerja Secara?"
         soal="Kamu lebih suka bekerja secara?"

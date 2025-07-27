@@ -14,9 +14,9 @@ export default function KeterampilanDanSkill({
   return (
     <>
       {/* Keterampilan dan Skill */}
-      <label className="block mb-4">
-        <span className="font-bold">Keterampilan / Skill</span>
-      </label>
+      <div className="mb-4">
+        <h1 className="font-bold text-2xl text-center">Keterampilan & Skill</h1>
+      </div>
 
       <CheckboxGroup
         label="Skill apa yang kamu kuasai"

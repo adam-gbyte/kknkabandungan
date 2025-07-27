@@ -13,6 +13,9 @@ export default function PreferensiKarir({
 }) {
   return (
     <>
+      <div className="mb-4">
+        <h1 className="font-bold text-2xl text-center">Preferensi Karir</h1>
+      </div>
       <CheckboxGroup
         label="Bidang Karier"
         soal="Bidang karier apa yang menurutmu paling menarik?"
