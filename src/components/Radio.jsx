@@ -1,7 +1,7 @@
 // components/RawWithConditionalInput.jsx
 import { useState } from "react";
 
-export default function RawWithConditionalInput({
+export default function Radio({
   label = "Apakah kamu sudah memiliki cita-cita?",
   options = [],
 }) {

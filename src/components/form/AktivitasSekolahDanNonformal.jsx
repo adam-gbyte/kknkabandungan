@@ -1,5 +1,5 @@
 import CheckboxGroup from "../CheckboxGroup";
-import RawWithConditionalInput from "../RadioWithConditionalInput";
+import Radio from "../Radio";
 
 export default function AktivitasSekolahDanNonformal({
   kegiatan,
@@ -27,7 +27,7 @@ export default function AktivitasSekolahDanNonformal({
         valueLainnya={kegiatanLainnya}
         onChangeLainnya={setKegiatanLainnya}
       />
-      <RawWithConditionalInput
+      <Radio
         label="Apakah kamu pernah ikut kursus / pelatihan di luar sekolah"
         options={["Ya", "Tidak"]}
       />

@@ -1,4 +1,4 @@
-import RawWithConditionalInput from "../RadioWithConditionalInput";
+import Radio from "../Radio";
 import CheckboxGroup from "../CheckboxGroup";
 
 export default function TujuanDanHarapanKarir({
@@ -27,10 +27,7 @@ export default function TujuanDanHarapanKarir({
         valueLainnya={karierLainnya}
         onChangeLainnya={setKarierLainnya}
       />
-      <RawWithConditionalInput
-        label="Apakah kamu sudah memiliki cita-cita?"
-        options={options}
-      />
+      <Radio label="Apakah kamu sudah memiliki cita-cita?" options={options} />
     </>
   );
 }

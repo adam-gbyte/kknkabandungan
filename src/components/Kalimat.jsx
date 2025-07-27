@@ -42,7 +42,7 @@ Halo, nama saya ${nama}. Saya memiliki waktu luang yang saya gunakan untuk ${[
 
 Saya memiliki keterampilan seperti ${[...skill, skillLainnya]
     .filter(Boolean)
-    .join(", ")} dengan tingkat penguasaan ${skorSkill}/5. Saya ${
+    .join(", ")} dengan tingkat penguasaan ${skorSkill}%/100%. Saya ${
     belajar === "Ya"
       ? "masih ingin terus belajar"
       : "tidak ingin belajar lebih lanjut untuk saat ini"
