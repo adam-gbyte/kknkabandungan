@@ -101,6 +101,8 @@ export default function PenguatanKarir() {
     lulus,
   });
 
+  console.log("kalimaat", kalimat);
+
   const [text, setText] = useState({});
   const [loading, setLoading] = useState(false);
 

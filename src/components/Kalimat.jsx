@@ -1,4 +1,4 @@
-export default function buatKalimatUntukGemini({
+function generateKalimat({
   nama,
   luang,
   luangLainnya,
@@ -24,59 +24,39 @@ export default function buatKalimatUntukGemini({
   karirLainnya,
   lulus,
 }) {
+  const gabung = (array, lainnya) => {
+    const isi = [...array];
+    if (lainnya?.trim()) isi.push(lainnya.trim());
+    return isi.join(", ");
+  };
+
+  const pelajaranText = pelajaranLainnya ? pelajaranLainnya : pelajaran;
+  const topikText = topikLainnya ? topikLainnya : topik;
+  const kepribadianText = kepribadianLainnya || kepribadian;
+  const gayaBelajarText = gayaBelajarLainnya || gayaBelajar;
+  const mySelfText = mySelfLainnya || mySelf;
+  const karirText = gabung(karir, karirLainnya);
+  const karierText = gabung(karier, karierLainnya);
+  const skillText = gabung(skill, skillLainnya);
+  const kegiatanText = gabung(kegiatan, kegiatanLainnya);
+  const luangText = gabung(luang, luangLainnya);
+
   return `
-Halo, nama saya ${nama}. Saya memiliki waktu luang yang saya gunakan untuk ${[
-    ...luang,
-    luangLainnya,
-  ]
-    .filter(Boolean)
-    .join(", ")}. Mata pelajaran yang saya sukai adalah ${[
-    pelajaran || pelajaranLainnya,
-  ]
-    .filter(Boolean)
-    .join("")}. Topik yang paling menarik bagi saya adalah ${[
-    topik || topikLainnya,
-  ]
-    .filter(Boolean)
-    .join("")}.
+Halo, nama saya ${nama || "[Nama belum diisi]"}. Saya memiliki minat dan hobi dalam ${luangText || "belum disebutkan"}, 
+serta menyukai pelajaran ${pelajaranText || "belum disebutkan"} dengan topik favorit ${topikText || "belum disebutkan"}.
 
-Saya memiliki keterampilan seperti ${[...skill, skillLainnya]
-    .filter(Boolean)
-    .join(", ")} dengan tingkat penguasaan ${skorSkill}%/100%. Saya ${
-    belajar === "Ya"
-      ? "masih ingin terus belajar"
-      : "tidak ingin belajar lebih lanjut untuk saat ini"
-  }.
+Saya memiliki keterampilan di bidang ${skillText || "belum disebutkan"} dengan tingkat kepercayaan diri sekitar ${skorSkill}%. 
+Saat ini saya ${belajar === "Ya" ? "masih ingin terus mengembangkan keterampilan ini" : "belum fokus untuk mengembangkan keterampilan ini lebih lanjut"}.
 
-Dalam hal kepribadian, saya adalah seseorang yang ${[
-    kepribadian || kepribadianLainnya,
-  ]
-    .filter(Boolean)
-    .join("")}. Gaya belajar saya lebih cocok dengan pendekatan ${[
-    gayaBelajar || gayaBelajarLainnya,
-  ]
-    .filter(Boolean)
-    .join("")}, dan saya menggambarkan diri saya sebagai ${[
-    mySelf || mySelfLainnya,
-  ]
-    .filter(Boolean)
-    .join("")}.
+Dari sisi kepribadian, saya adalah pribadi yang ${kepribadianText || "belum diisi"}, 
+dengan gaya belajar atau gaya kerja ${gayaBelajarText || "belum disebutkan"}. 
+Saya mengenal diri saya sebagai ${mySelfText || "belum diisi"}.
 
-Tujuan karier saya adalah menjadi ${[...karier, karierLainnya]
-    .filter(Boolean)
-    .join(
-      ", ",
-    )}. Saya juga aktif dalam kegiatan sekolah dan nonformal seperti ${[
-    ...kegiatan,
-    kegiatanLainnya,
-  ]
-    .filter(Boolean)
-    .join(", ")}.
+Saya memiliki tujuan karier di bidang ${karierText || "belum disebutkan"} dan bercita-cita bekerja sebagai ${karirText || "belum disebutkan"} 
+setelah ${lulus || "lulus sekolah/kuliah"}.
 
-Preferensi karier saya adalah ${[...karir, karirLainnya]
-    .filter(Boolean)
-    .join(", ")}, dan saya berencana untuk ${lulus} setelah lulus dari sekolah.
+Selama ini saya aktif dalam kegiatan seperti ${kegiatanText || "belum disebutkan"}.
 
-Berdasarkan semua informasi di atas, mohon berikan rekomendasi jurusan kuliah dan/atau karier yang paling sesuai untuk saya.
+Demikian ringkasan singkat tentang diri saya.
 `.trim();
 }

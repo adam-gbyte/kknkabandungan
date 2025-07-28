@@ -17,7 +17,7 @@ export default function Modal({
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 backdrop-blur-sm transition-all">
-      <div className="bg-white rounded-2xl shadow-xl max-w-3xl w-full mx-2 p-3 relative animate-fade-in max-h-xl overflow-y-auto">
+      <div className="bg-white rounded-2xl shadow-xl max-w-3xl w-full mx-2 p-3 relative animate-fade-in max-h-3xl overflow-y-auto">
         <button
           onClick={onClose}
           className="absolute top-2 right-3 text-gray-600 hover:text-red-500 text-xl font-bold"
