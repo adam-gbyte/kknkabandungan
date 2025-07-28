@@ -19,7 +19,7 @@ import AktivitasSekolahDanNonformal from "../components/form/AktivitasSekolahDan
 import PreferensiKarir from "../components/form/PreferensiKarir";
 import Modal from "../components/Modal";
 
-import buatKalimatUntukGemini from "../components/Kalimat";
+import Kalimat from "../components/Kalimat";
 
 import { GoogleGenAI, Type } from "@google/genai";
 
@@ -74,7 +74,7 @@ export default function PenguatanKarir() {
     Gemini();
   };
 
-  const kalimat = buatKalimatUntukGemini({
+  const kalimat = generateKalimat({
     nama,
     luang,
     luangLainnya,
