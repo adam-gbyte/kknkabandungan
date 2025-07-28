@@ -1,4 +1,4 @@
-function generateKalimat({
+export default function generateKalimat({
   nama,
   luang,
   luangLainnya,

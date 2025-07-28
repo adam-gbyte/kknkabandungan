@@ -19,7 +19,7 @@ import AktivitasSekolahDanNonformal from "../components/form/AktivitasSekolahDan
 import PreferensiKarir from "../components/form/PreferensiKarir";
 import Modal from "../components/Modal";
 
-import Kalimat from "../components/Kalimat";
+import generateKalimat from "../components/Kalimat";
 
 import { GoogleGenAI, Type } from "@google/genai";
 
