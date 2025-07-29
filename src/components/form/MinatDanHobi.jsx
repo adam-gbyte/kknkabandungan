@@ -44,7 +44,10 @@ export default function MinatDanHobi({
         label="Mata Pelajaran Favorit"
         soal="Mata pelajaran apa yang paling kamu sukai?"
         value={pelajaran}
-        onChange={setPelajaran}
+        onChange={(pelajaran) => {
+          setPelajaran(pelajaran);
+          if (pelajaran !== "Lainnya") setPelajaranLainnya("");
+        }}
         options={[
           "Matematika",
           "IPA (Biologi/Fisika/Kimia)",
@@ -65,7 +68,10 @@ export default function MinatDanHobi({
         label="Topik yang Sering Dicari"
         soal="Topik apa yang paling sering kamu cari atau lihat di internet?"
         value={topik}
-        onChange={setTopik}
+        onChange={(topik) => {
+          setTopik(topik);
+          if (topik !== "Lainnya") setTopikLainnya("");
+        }}
         options={[
           "Teknologi",
           "Kesehatan",

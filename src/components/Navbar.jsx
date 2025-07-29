@@ -1,6 +1,15 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { Menu, X, Home, Image, User, FileText, Briefcase } from "lucide-react";
+import {
+  Menu,
+  X,
+  Home,
+  Image,
+  User,
+  FileText,
+  Briefcase,
+  Presentation,
+} from "lucide-react";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -15,6 +24,11 @@ export default function Navbar() {
       name: "Karir",
       path: "/pemantapan-karir",
       icon: <Briefcase size={18} />,
+    },
+    {
+      name: "Presentasi",
+      path: "/presentasi",
+      icon: <Presentation size={18} />,
     },
   ];
 

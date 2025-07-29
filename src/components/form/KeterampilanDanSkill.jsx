@@ -44,6 +44,26 @@ export default function KeterampilanDanSkill({
         value={skorSkill}
         onChange={setSkorSkill}
       />
+
+      {skill.length > 0 && (
+        <div className="max-w-sm mx-auto p-4">
+          <label className="block mb-2 font-medium text-gray-700">
+            Apakah kamu masih ingin mengembangkan skill {skill}?
+          </label>
+          <select
+            value={belajar}
+            onChange={(e) => setBelajar(e.target.value)}
+            className="w-full p-2 border rounded-md shadow-sm"
+          >
+            <option value="Ya">Ya</option>
+            <option value="Tidak">Tidak</option>
+          </select>
+
+          <p className="mt-3 text-gray-600">
+            Jawaban kamu: <strong>{belajar}</strong>
+          </p>
+        </div>
+      )}
     </>
   );
 }

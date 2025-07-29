@@ -33,7 +33,10 @@ export default function KepribadianDanGayaBelajar({
         label="Gaya Belajar"
         soal="Kamu lebih suka belajar dengan cara?"
         value={gayaBelajar}
-        onChange={setGayaBelajar}
+        onChange={(gayaBelajar) => {
+          setGayaBelajar(gayaBelajar);
+          if (gayaBelajar !== "Lainnya") setGayaBelajarLainnya("");
+        }}
         options={[
           "Membaca dan Mencatat",
           "Menonton video atau Tutorial",
@@ -49,7 +52,10 @@ export default function KepribadianDanGayaBelajar({
         label="Dirimu"
         soal="Bagaimana kamu menilai dirimu?"
         value={mySelf}
-        onChange={setMySelf}
+        onChange={(self) => {
+          setMySelf(self);
+          if (self !== "Lainnya") setMySelfLainnya("");
+        }}
         options={[
           "Kreatif",
           "Tekun",
