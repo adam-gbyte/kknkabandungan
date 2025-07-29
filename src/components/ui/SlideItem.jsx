@@ -2,7 +2,7 @@ export default function SlideItem({ label, title, content, child }) {
   switch (label) {
     case "pertama":
       return (
-        <div className="relative overflow-hidden bg-gradient-to-br from-blue-100 to-white min-h-[400px] md:min-h-[500px] rounded-2xl shadow-2xl px-6 md:px-25 py-25 md:py-20 flex flex-col md:flex-row items-center justify-center text-center md:text-left gap-6">
+        <div className="relative overflow-hidden bg-gradient-to-br from-blue-100 to-white min-h-[400px] md:min-h-[500px] rounded-2xl px-6 md:px-25 py-25 md:py-20 flex flex-col md:flex-row items-center justify-center text-center md:text-left gap-6">
           {/* SVG Dekoratif */}
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -52,7 +52,7 @@ export default function SlideItem({ label, title, content, child }) {
           {/* Foto Kanan */}
           <div className="flex-1 flex justify-center mt-8 md:mt-0">
             <img
-              src="https://ik.imagekit.io/goldiron/PRESENTASI/IMG_20250624_151033-removebg-preview.png?updatedAt=1753764365347"
+              src="https://ik.imagekit.io/goldiron/PRESENTASI/IMG_20250624_151033-removebg-preview.png"
               alt="Foto Adam"
               className="h-[280px] md:h-[340px] object-contain drop-shadow-2xl transition-transform hover:scale-105"
             />
@@ -67,26 +67,38 @@ export default function SlideItem({ label, title, content, child }) {
 
     case "kedua":
       return (
-        <div className="bg-yellow-50 min-h-[500px] md:min-h-[400px] border-l-8 md:max-w-5xl border-yellow-400 p-10 md:p-8 rounded-md shadow">
-          <h2 className="text-2xl md:text-3xl font-semibold text-yellow-700">
-            {title}
-          </h2>
-          <p className="text-base text-gray-800 mt-3 leading-relaxed">
-            {content}
-          </p>
-          {child && (
-            <ul className="mt-2 space-y-2 text-left list-disc list-inside text-gray-800 text-base md:text-lg">
-              {child.map((point, idx) => (
-                <li key={idx}>{point}</li>
-              ))}
-            </ul>
-          )}
+        <div className="relative overflow-hidden bg-gradient-to-br from-blue-100 to-white min-h-[400px] md:min-h-[500px] rounded-2xl px-6 md:px-10 py-16 md:py-20 flex items-center justify-center text-center md:text-left">
+          <div className="max-w-4xl w-full">
+            <h2 className="text-2xl md:text-4xl font-bold text-blue-800 underline decoration-yellow-400">
+              {title}
+            </h2>
+
+            <p className="text-base md:text-lg text-gray-800 mt-4 leading-relaxed">
+              {content}
+            </p>
+
+            {child && (
+              <ol className="mt-6 space-y-3 text-left text-gray-800 text-base md:text-lg">
+                {child.map((point, idx) => (
+                  <li
+                    key={idx}
+                    className="bg-yellow-100 px-4 py-2 rounded-md shadow-sm flex gap-3 items-start"
+                  >
+                    <span className="font-bold text-yellow-700">
+                      {idx + 1}.
+                    </span>
+                    <span>{point}</span>
+                  </li>
+                ))}
+              </ol>
+            )}
+          </div>
         </div>
       );
 
     case "ketiga":
       return (
-        <div className="bg-black min-h-[500px] md:min-h-[400px] text-white p-10 flex flex-col items-center justify-center rounded-xl">
+        <div className="relative overflow-hidden bg-gradient-to-br from-blue-100 to-white min-h-[400px] md:min-h-[500px] rounded-2xl px-6 md:px-10 py-16 md:py-20 flex items-center justify-center text-center md:text-left">
           <h2 className="text-2xl font-medium text-green-400 uppercase tracking-wide">
             {title}
           </h2>

@@ -41,27 +41,11 @@ export default function generateKalimat({
   const kegiatanText = gabung(kegiatan, kegiatanLainnya);
   const luangText = gabung(luang, luangLainnya);
 
-  // Console logs untuk debugging
-  console.log("Nama:", nama);
-  console.log("Minat & Hobi (luang):", luangText);
-  console.log("Pelajaran: CEK", pelajaranText);
-  console.log("Topik Favorit:", topikText);
-  console.log("Keterampilan:", skillText);
-  console.log("Skor Keterampilan:", skorSkill);
-  console.log("Belajar:", belajar);
-  console.log("Kepribadian:", kepribadianText);
-  console.log("Gaya Belajar:", gayaBelajarText);
-  console.log("Diri Saya (mySelf):", mySelfText);
-  console.log("Tujuan Karier (karier):", karierText);
-  console.log("Cita-cita Karir (karir):", karirText);
-  console.log("Setelah Lulus:", lulus);
-  console.log("Kegiatan:", kegiatanText);
-
   return `
 Halo, nama saya ${nama || "[Nama belum diisi]"}. Saya memiliki minat dan hobi dalam ${luangText || "[belum disebutkan]"}, 
 serta menyukai pelajaran ${pelajaranText || "[belum disebutkan]"} dengan topik favorit ${topikText || "[belum disebutkan]"}.
 
-Saya memiliki keterampilan di bidang ${skillText || "[belum disebutkan]"} dengan tingkat kepercayaan diri sekitar ${skorSkill}%. 
+Saya memiliki keterampilan di bidang ${skillText || "[belum disebutkan]"} dengan tingkat kepercayaan diri sekitar ${skorSkill || 0}%. 
 Saat ini saya ${belajar === "Ya" ? "masih ingin terus mengembangkan keterampilan ini" : "belum fokus untuk mengembangkan keterampilan ini lebih lanjut"}.
 
 Dari sisi kepribadian, saya adalah pribadi yang ${kepribadianText || "belum diisi"}, 
@@ -73,6 +57,11 @@ setelah ${lulus || "lulus sekolah/kuliah"}.
 
 Selama ini saya aktif dalam kegiatan seperti ${kegiatanText || "[belum disebutkan]"}.
 
-Demikian ringkasan singkat tentang diri saya.
+---
+
+Berdasarkan data tersebut, mohon bantu berikan **rekomendasi karier** dan **jurusan perkuliahan yang paling sesuai** untuk saya. 
+Silakan sesuaikan rekomendasi berdasarkan minat, keterampilan, pelajaran favorit, kepribadian, dan gaya belajar saya.
+
+Terima kasih!
 `.trim();
 }
