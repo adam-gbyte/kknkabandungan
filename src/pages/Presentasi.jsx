@@ -36,8 +36,7 @@ const sliderItems = [
   {
     label: "keempat",
     title: "Data Diproses",
-    content:
-      "Siswa atau pengguna akan diminta mengisi berbagai pertanyaan atau form input berdasarkan:",
+    content: "Data yang sudah di input akan di proses oleh AI GEMINI",
     child: [
       "Web akan mengumpulkan dan menyimpan semua jawaban.",
       "Sistem dari AI GEMINI kemudian akan menganalisis pola dari jawaban tersebut.",

@@ -183,6 +183,21 @@ export default function SlideItem({ label, title, content, child }) {
         </div>
       );
 
+    case "keenam":
+      return (
+        <div className="relative overflow-hidden bg-gradient-to-br from-blue-100 via-white to-blue-100 min-h-[400px] md:min-h-[500px] rounded-3xl px-4 md:px-12 py-10 flex items-center justify-center text-center md:text-left">
+          <div className="max-w-4xl w-full space-y-6">
+            <h2 className="text-3xl md:text-5xl font-extrabold text-green-600 tracking-wide uppercase underline underline-offset-4 decoration-green-400">
+              {title}
+            </h2>
+
+            <p className="text-base md:text-xl font-light text-gray-800 leading-relaxed">
+              {content}
+            </p>
+          </div>
+        </div>
+      );
+
     default:
       return (
         <div className="bg-gray-100 p-6 text-center rounded-md">
