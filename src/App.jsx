@@ -18,15 +18,15 @@ export default function App() {
         {/* Navbar */}
         <Navbar />
         {/* Main Content */}
-        <main className="flex-1 pt-25 p-4 overflow-y-auto">
+        <main className="flex-1 pt-25 p-2 overflow-y-auto">
           <Routes>
             <Route path="/" element={<Beranda />} />
             <Route path="/galeri" element={<Galeri />} />
             <Route path="/profil" element={<Profil />} />
             <Route path="/laporan" element={<Laporan />} />
-            <Route path="/presentasi" element={<Presentasi />} />
             <Route path="/pemantapan-karir" element={<PemantapanKarir />} />
             <Route path="/admin" element={<Admin />} />
+            <Route path="/presentasi" element={<Presentasi />} />
 
             {/* Hapus aja nanti */}
             <Route path="/karier-form" element={<KarierForm />} />
