@@ -60,13 +60,29 @@ export default function Presentasi() {
   };
 
   return (
-    <div className="relative min-h-[50vh] px-2">
-      <h2 className="text-2xl md:text-3xl font-bold text-center text-gray-800 flex justify-center items-center gap-2">
+    <div className="relative min-h-[49vh]">
+      {/* <h2 className="text-2xl md:text-3xl font-bold text-center text-gray-800 flex justify-center items-center gap-2">
         <Sparkle className="w-5 h-5 md:w-6 md:h-6" />
         Pemantapan Karir
-      </h2>
+      </h2> */}
 
-      <div className="relative max-w-3xl md:max-w-7xl mx-auto">
+      <div className="block md:hidden flex flex-col items-center justify-center h-screen px-6 animate-fadeIn">
+        <div className="bg-white shadow-xl rounded-xl p-6 border border-red-200 max-w-md w-full text-center">
+          <div className="text-red-500 text-5xl mb-3">⚠️</div>
+          <h2 className="text-lg font-bold text-gray-800 mb-2">
+            Akses Terbatas di Perangkat Mobile
+          </h2>
+          <p className="text-gray-600">
+            Presentasi ini hanya bisa dilihat melalui{" "}
+            <span className="font-semibold text-blue-600">
+              mode Desktop atau Laptop
+            </span>
+            . Silakan buka dari perangkat dengan layar yang lebih besar.
+          </p>
+        </div>
+      </div>
+
+      <div className="hidden md:block relative max-w-3xl md:max-w-7xl mx-auto">
         <Slider {...settings}>
           {sliderItems.map((item, index) => (
             <div key={index} className="p-2">
