@@ -22,8 +22,41 @@ const sliderItems = [
   },
   {
     label: "ketiga",
-    title: "Garis besar bagaimana WEB Pemantapan Karir bekerja?",
-    content: "Menjadi Full Stack Developer yang membangun solusi bermanfaat.",
+    title: "Cara kerja WEB Pemantapan Karir",
+    content:
+      "Siswa atau pengguna akan diminta mengisi berbagai pertanyaan atau form input berdasarkan:",
+    child: [
+      "Minat dan Hobi",
+      "Keterampilan dan Skill",
+      "Kepribadian dan Gaya Belajar",
+      "Aktivitas Sekolah dan Nonformal",
+      "Referensi Karier",
+    ],
+  },
+  {
+    label: "keempat",
+    title: "Data Diproses",
+    content:
+      "Siswa atau pengguna akan diminta mengisi berbagai pertanyaan atau form input berdasarkan:",
+    child: [
+      "Web akan mengumpulkan dan menyimpan semua jawaban.",
+      "Sistem dari AI GEMINI kemudian akan menganalisis pola dari jawaban tersebut.",
+    ],
+  },
+  {
+    label: "kelima",
+    title: "Hasil Rekomendasi Ditampilkan",
+    content: "Web akan menampilkan hasil pemantapan karier berupa:",
+    child: [
+      "Rekomendasi jalur karier (misal: Dokter, Programmer, Guru, dll)",
+      "Alasan mengapa rekomendasi tersebut cocok",
+      "Kadang disertai dengan sumber inspirasi atau referensi lanjutan",
+    ],
+  },
+  {
+    label: "keenam",
+    title: "Terima Kasih",
+    content: "Oleh : Adam Gumilang",
   },
 ];
 

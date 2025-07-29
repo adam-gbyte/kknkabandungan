@@ -98,11 +98,88 @@ export default function SlideItem({ label, title, content, child }) {
 
     case "ketiga":
       return (
-        <div className="relative overflow-hidden bg-gradient-to-br from-blue-100 to-white min-h-[400px] md:min-h-[500px] rounded-2xl px-6 md:px-10 py-16 md:py-20 flex items-center justify-center text-center md:text-left">
-          <h2 className="text-2xl font-medium text-green-400 uppercase tracking-wide">
-            {title}
-          </h2>
-          <p className="text-lg mt-2 font-light text-gray-200">{content}</p>
+        <div className="relative overflow-hidden bg-gradient-to-br from-blue-100 to-white min-h-[400px] md:min-h-[500px] rounded-2xl px-2 md:px-10 py-5 flex items-center justify-center text-center md:text-left">
+          <div className="max-w-4xl w-full">
+            <h2 className="text-3xl md:text-4xl font-extrabold text-green-600 uppercase tracking-wide underline decoration-green-300">
+              {title}
+            </h2>
+
+            <p className="text-lg md:text-xl mt-4 font-light text-gray-700 leading-relaxed">
+              {content}
+            </p>
+
+            {child && (
+              <ol className="mt-2 space-y-2 text-left text-gray-800 text-base md:text-lg">
+                {child.map((point, idx) => (
+                  <li
+                    key={idx}
+                    className="bg-green-100 px-5 py-3 rounded-lg shadow transition-all flex items-start gap-2"
+                  >
+                    <span className="font-bold text-green-700">{idx + 1}.</span>
+                    <span>{point}</span>
+                  </li>
+                ))}
+              </ol>
+            )}
+          </div>
+        </div>
+      );
+
+    case "keempat":
+      return (
+        <div className="relative overflow-hidden bg-gradient-to-br from-blue-100 to-white min-h-[400px] md:min-h-[500px] rounded-2xl px-2 md:px-10 py-5 flex items-center justify-center text-center md:text-left">
+          <div className="max-w-4xl w-full">
+            <h2 className="text-3xl md:text-4xl font-extrabold text-green-600 uppercase tracking-wide underline decoration-green-300">
+              {title}
+            </h2>
+
+            <p className="text-lg md:text-xl mt-4 font-light text-gray-700 leading-relaxed">
+              {content}
+            </p>
+
+            {child && (
+              <ol className="mt-2 space-y-2 text-left text-gray-800 text-base md:text-lg">
+                {child.map((point, idx) => (
+                  <li
+                    key={idx}
+                    className="bg-green-100 px-5 py-3 rounded-lg shadow transition-all flex items-start gap-2"
+                  >
+                    <span className="font-bold text-green-700">{idx + 1}.</span>
+                    <span>{point}</span>
+                  </li>
+                ))}
+              </ol>
+            )}
+          </div>
+        </div>
+      );
+
+    case "kelima":
+      return (
+        <div className="relative overflow-hidden bg-gradient-to-br from-blue-100 to-white min-h-[400px] md:min-h-[500px] rounded-2xl px-2 md:px-10 py-5 flex items-center justify-center text-center md:text-left">
+          <div className="max-w-4xl w-full">
+            <h2 className="text-3xl md:text-4xl font-extrabold text-green-600 uppercase tracking-wide underline decoration-green-300">
+              {title}
+            </h2>
+
+            <p className="text-lg md:text-xl mt-4 font-light text-gray-700 leading-relaxed">
+              {content}
+            </p>
+
+            {child && (
+              <ol className="mt-2 space-y-2 text-left text-gray-800 text-base md:text-lg">
+                {child.map((point, idx) => (
+                  <li
+                    key={idx}
+                    className="bg-green-100 px-5 py-3 rounded-lg shadow transition-all flex items-start gap-2"
+                  >
+                    <span className="font-bold text-green-700">{idx + 1}.</span>
+                    <span>{point}</span>
+                  </li>
+                ))}
+              </ol>
+            )}
+          </div>
         </div>
       );
 
