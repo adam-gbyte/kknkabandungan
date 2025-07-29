@@ -54,7 +54,7 @@ export default function SlideItem({ label, title, content, child }) {
             <img
               src="https://ik.imagekit.io/goldiron/PRESENTASI/WhatsApp_Image_2025-07-29_at_15.39.50-removebg-preview.png?updatedAt=1753778659195"
               alt="Foto Adam dan Gelar"
-              className="h-[280px] md:h-[340px] object-contain drop-shadow-2xl transition-transform hover:scale-105"
+              className="h-[240px] md:h-[340px] object-contain drop-shadow-2xl transition-transform hover:scale-105"
             />
             {/* Garis tipis dekoratif */}
             <div className="w-36 h-[1px] bg-gray-400 mt-4 mb-2"></div>
