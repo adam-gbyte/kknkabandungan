@@ -98,7 +98,7 @@ export default function Presentasi() {
         Pemantapan Karir
       </h2> */}
 
-      <div className="md:hidden flex flex-col items-center justify-center h-screen px-6 animate-fadeIn">
+      <div className="md:hidden flex flex-col items-center justify-center h-svh px-6 animate-fadeIn">
         <div className="bg-white shadow-xl rounded-xl p-6 border border-red-200 max-w-md w-full text-center">
           <div className="text-red-500 text-5xl mb-3">⚠️</div>
           <h2 className="text-lg font-bold text-gray-800 mb-2">

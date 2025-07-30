@@ -21,7 +21,7 @@ const tabs = [
 
 function CardAnggota({ nama, foto, className = "" }) {
   return (
-    <div className={`p-4 shadow ${className}`}>
+    <div className={`p-4 ${className}`}>
       <img
         src={foto}
         alt={nama}
@@ -32,7 +32,7 @@ function CardAnggota({ nama, foto, className = "" }) {
 }
 
 export default function Profil() {
-  const [activeTab, setActiveTab] = useState("ketua");
+  const [activeTab, setActiveTab] = useState("dpl");
 
   return (
     <>

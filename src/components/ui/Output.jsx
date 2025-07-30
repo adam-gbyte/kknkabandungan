@@ -4,10 +4,10 @@ export default function RekomendasiFlexible({ data }) {
   const rekomendasi = data.rekomendasi || data;
 
   return (
-    <div className="space-y-4">
+    <div className="space-y-6">
       {Object.entries(rekomendasi).map(([key, value], index) => (
         <div key={index}>
-          <h3 className="text-lg font-bold capitalize mb-2">
+          <h3 className="text-lg font-bold capitalize text-blue-600 mb-2">
             {formatKey(key)}
           </h3>
           <RenderValue value={value} depth={1} />
@@ -18,7 +18,8 @@ export default function RekomendasiFlexible({ data }) {
 }
 
 function RenderValue({ value, depth }) {
-  const padding = `pl-${Math.min(depth * 4, 16)}`; // limit indenting to avoid extreme paddings
+  const padding = `pl-${Math.min(depth * 4, 12)}`;
+  const baseClass = `text-sm ${padding} leading-relaxed`;
 
   if (Array.isArray(value)) {
     return (
@@ -28,7 +29,7 @@ function RenderValue({ value, depth }) {
             {typeof item === "object" && item !== null ? (
               <RenderValue value={item} depth={depth + 1} />
             ) : (
-              item
+              <span className="text-gray-700">{item}</span>
             )}
           </li>
         ))}
@@ -38,22 +39,28 @@ function RenderValue({ value, depth }) {
 
   if (typeof value === "object" && value !== null) {
     return (
-      <div className={`space-y-1 border-l-2 border-gray-200 ${padding}`}>
+      <div
+        className={`space-y-2 border-l-4 border-blue-200 bg-blue-50 p-3 my-2 rounded ${padding}`}
+      >
         {Object.entries(value).map(([subKey, subVal], i) => (
-          <div key={i}>
-            <strong className="capitalize">{formatKey(subKey)}:</strong>{" "}
-            {typeof subVal === "object" ? (
-              <RenderValue value={subVal} depth={depth + 1} />
-            ) : (
-              <span>{String(subVal)}</span>
-            )}
+          <div key={i} className="text-sm">
+            <div className="text-blue-700 font-medium">
+              {formatKey(subKey)}:
+            </div>
+            <div className="ml-3">
+              {typeof subVal === "object" ? (
+                <RenderValue value={subVal} depth={depth + 1} />
+              ) : (
+                <span className="text-gray-800">{String(subVal)}</span>
+              )}
+            </div>
           </div>
         ))}
       </div>
     );
   }
 
-  return <p className={`text-gray-700 ${padding}`}>{String(value)}</p>;
+  return <p className={`${baseClass} text-gray-800`}>{String(value)}</p>;
 }
 
 function formatKey(key) {

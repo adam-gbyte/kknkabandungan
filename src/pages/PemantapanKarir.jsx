@@ -66,6 +66,46 @@ export default function PenguatanKarir() {
   // NAMA
   const [nama, setNama] = useState("");
 
+  // INPUT DATA
+  const inputData = {
+    nama, // string
+
+    // Minat dan Hobi
+    luang, // array of string
+    luangLainnya, // string
+    pelajaran, // string
+    pelajaranLainnya, // string
+    topik, // string
+    topikLainnya, // string
+
+    // Keterampilan / Skill
+    skill, // array of string
+    skillLainnya, // string
+    skorSkill, // number (1–100)
+    belajar, // string (Ya / Tidak)
+
+    // Kepribadian
+    kepribadian, // string
+    kepribadianLainnya, // string
+    gayaBelajar, // string
+    gayaBelajarLainnya, // string
+    mySelf, // string
+    mySelfLainnya, // string
+
+    // Tujuan Karier
+    karier, // array of string
+    karierLainnya, // string
+
+    // Aktivitas
+    kegiatan, // array of string
+    kegiatanLainnya, // string
+
+    // Preferensi Karir
+    karir, // array of string
+    karirLainnya, // string
+    lulus, // string (Sudah / Belum / Sedang)
+  };
+
   // MODAL
   const [isModalOpen, setIsModalOpen] = useState(false);
 
@@ -101,27 +141,50 @@ export default function PenguatanKarir() {
     lulus,
   });
 
-  console.log("kalimaat", kalimat);
+  // console.log("kalimaat", kalimat);
 
   const [text, setText] = useState({});
   const [loading, setLoading] = useState(false);
 
   async function Gemini() {
-    setLoading(true);
     try {
+      setLoading(true);
       const response = await ai.models.generateContent({
         model: "gemini-2.5-flash",
-        // contents: [{ role: "user", parts: [{ text: kalimat }] }],
         contents: kalimat,
         config: {
           responseMimeType: "application/json",
         },
       });
 
-      const responseText = response.text;
-      const textParsed = JSON.parse(responseText);
+      try {
+        const responseText = response.text;
+        const textParsed = JSON.parse(responseText);
+        setText(textParsed);
 
-      setText(textParsed);
+        const urlAPI = import.meta.env.VITE_URL_API;
+
+        console.log(urlAPI);
+
+        // Kirim ke backend
+        const res = await fetch(`${urlAPI}/kkn-kabandungan/save`, {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            inputKalimat: inputData,
+            outputAI: textParsed,
+          }),
+        });
+
+        if (!res.ok) {
+          const errText = await res.text();
+          console.error("Gagal menyimpan ke backend:", res.status, errText);
+        }
+      } catch (error) {
+        console.error("Terjadi error saat menyimpan ke backend:", error);
+      }
     } catch (error) {
       console.error(
         "Terjadi error saat mengakses Gemini:",
@@ -282,29 +345,33 @@ export default function PenguatanKarir() {
             />
           </div>
         </div>
+
         <Tabs tabs={tabData} />
 
         {loading && (
-          <div className="flex  z-90 items-center justify-center gap-2 py-4">
-            <div className="flex gap-1">
-              <div className="w-2 h-2 bg-blue-500 rounded-full animate-bounce [animation-delay:-0.3s]"></div>
-              <div className="w-2 h-2 bg-blue-500 rounded-full animate-bounce [animation-delay:-0.15s]"></div>
-              <div className="w-2 h-2 bg-blue-500 rounded-full animate-bounce"></div>
+          <div className="flex items-center justify-center min-h-[200px] w-full text-center animate-pulse">
+            <div className="bg-white border border-gray-200 shadow-md rounded-xl p-6 max-w-md w-full space-y-4">
+              <p className="text-lg font-semibold text-blue-600">
+                Sedang memproses...
+              </p>
+              <p className="text-sm text-gray-500">
+                Mohon tunggu sebentar, hasil akan segera ditampilkan.
+              </p>
+              <div className="h-2 bg-blue-200 rounded-full w-full">
+                <div className="h-full bg-blue-500 rounded-full animate-loading-bar"></div>
+              </div>
             </div>
-            <span className="text-sm text-gray-600 font-medium">
-              Memuat data...
-            </span>
           </div>
         )}
-
-        <Modal
-          isOpen={isModalOpen}
-          onClose={() => setIsModalOpen(false)}
-          title={`Karier yang harus ${nama || "User"} tekuni`}
-          deskripsi="Berdasarkan jawaban kamu, berikut ini adalah rekomendasi karier yang sangat cocok untuk kepribadian dan minat kamu:"
-          rekomendasi={text}
-        />
       </div>
+
+      <Modal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        title={`Karier yang harus ${nama || "User"} tekuni`}
+        deskripsi="Berdasarkan jawaban kamu, berikut ini adalah rekomendasi karier yang sangat cocok untuk kepribadian dan minat kamu:"
+        rekomendasi={text}
+      />
 
       <Footer />
     </>
