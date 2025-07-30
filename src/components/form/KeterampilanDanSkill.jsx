@@ -36,15 +36,6 @@ export default function KeterampilanDanSkill({
         onChangeLainnya={setSkillLainnya}
       />
 
-      <Scale
-        minNum={1}
-        maxNum={100}
-        soal="Seberapa percaya diri kamu dengan skill tersebut?"
-        label="Penilaian Diri"
-        value={skorSkill}
-        onChange={setSkorSkill}
-      />
-
       {skill.length > 0 && (
         <div className="max-w-sm mx-auto p-4">
           <label className="block mb-2 font-medium text-gray-700">
@@ -64,6 +55,15 @@ export default function KeterampilanDanSkill({
           </p>
         </div>
       )}
+
+      <Scale
+        minNum={1}
+        maxNum={100}
+        soal="Seberapa percaya diri kamu dengan skill tersebut?"
+        label="Penilaian Diri"
+        value={skorSkill}
+        onChange={setSkorSkill}
+      />
     </>
   );
 }
