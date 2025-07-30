@@ -40,7 +40,7 @@ export default function PreferensiKarir({
         soal="Setelah lulus nanti, kamu ingin?"
         value={lulus}
         onChange={setLulus}
-        options={["Langsung Bekerja", "Malnjutkan Kuliah", "Belum Tahu"]}
+        options={["Langsung Bekerja", "Melanjutkan Kuliah", "Belum Tahu"]}
         showLainnya={false}
       />
       <button

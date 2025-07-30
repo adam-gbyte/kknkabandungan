@@ -12,7 +12,7 @@ export default function TujuanDanHarapanKarir({
     <>
       <div className="mb-4">
         <h1 className="font-bold text-2xl text-center">
-          Tujuan & Harapan Karir
+          Tujuan & Harapan Karier
         </h1>
       </div>
       <CheckboxGroup
@@ -22,11 +22,11 @@ export default function TujuanDanHarapanKarir({
         onChange={setKarier}
         options={[
           "Gaji yang besar",
-          "Waktu kerja yang",
+          "Waktu kerja yang fleksibel",
           "Bisa membantu orang lain",
           "Bisa bekerja dari mana saja (remote)",
           "kreativitas",
-          "Stabilitas dan keamana",
+          "Stabilitas dan keamanan",
         ]}
         showLainnya={true}
         valueLainnya={karierLainnya}
